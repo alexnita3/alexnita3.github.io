@@ -1,0 +1,2427 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <title>GalaxyRP | Documentation by Alexa</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stroke.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+
+    <!-- CUSTOM -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            document.documentElement.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('#mode').addEventListener('click',()=>{
+                document.querySelector('html').classList.toggle('dark');
+            })
+        });
+
+
+    </script>
+
+    <div id="wrapper">
+
+        <div id="mode" >
+            <div class="dark">
+                <svg aria-hidden="true" viewBox="0 0 512 512">
+                    <title>lightmode</title>
+                    <path fill="currentColor" d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path>
+                </svg>
+            </div>
+            <div class="light">
+                <svg aria-hidden="true" viewBox="0 0 512 512">
+                    <title>darkmode</title>
+                    <path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <section id="top" class="section docs-heading">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="big-title text-center">
+                            <h1>GalaxyRP Mod</h1>
+                            <p class="lead">A JKA roleplaying mod</p>
+                        </div>
+                        <!-- end title -->
+                    </div>
+                    <!-- end 12 -->
+                </div>
+                <!-- end row -->
+
+                <hr>
+
+            </section>
+            <!-- end section -->
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
+                        <ul class="nav">
+                            <li><a href="#line1">Features</a></li>
+                            <li><a href="#line2">Installation</a></li>
+                            <li><a href="#line3">Quick Start Guide (Players)</a>
+                                <ul class="nav">
+                                    <li><a href="#line3_1">1.Getting to the console</a></li>
+                                    <li><a href="#line3_2">2.Creating an account</a></li>
+                                    <li><a href="#line3_3">3.Creating a character</a></li>
+                                    <li><a href="#line3_4">4.Checking your stats and abilities</a></li>
+                                    <li><a href="#line3_5">4.Start roleplaying!</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line4">Account System</a></li>
+                            <li><a href="#line5">Admin System</a></li>
+                            <li><a href="#line6">RP Basics</a>
+                                <ul class="nav">
+                                    <li><a href="#line6_1">Credit System</a></li>
+                                    <li><a href="#line6_2">Ally System</a></li>
+                                    <li><a href="#line6_3">Emotes</a></li>
+                                    <li><a href="#line6_4">NPC Ordering System</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line12">Chat Basics</a>
+                                <ul class="nav">
+                                    <li><a href="#line12_1">OOC chat</a></li>
+                                    <li><a href="#line12_2">Say chat</a></li>
+                                    <li><a href="#line12_3">Actions</a></li>
+                                    <li><a href="#line12_4">Descriptions</a></li>
+                                    <li><a href="#line12_5">Force Actions</a></li>
+                                    <li><a href="#line12_6">Shouting</a></li>
+                                    <li><a href="#line12_7">Lowering your voice</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line7">Entity System</a>
+                                <ul class="nav">
+                                    <li><a href="#line7_1">List of Entities</a></li>
+                                    <li><a href="#line7_2">Remapping Shaders</a></li>
+                                </ul>
+                            <li><a href="#line8">Games</a>
+                                <ul class="nav">
+                                    <li><a href="#line8_1">Racing Mode</a></li>
+                                    <li><a href="#line8_2">Duel Tournament</a></li>
+                                    <li><a href="#line8_3">Sniper Battle</a></li>
+                                    <li><a href="#line8_4">Melee Battle</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line9">Useful Commands</a></li>
+                            <li><a href="#line10">Version History (Changelog)</a></li>
+                            <li><a href="#line11">Copyright and license</a></li>
+                        </ul>
+                    </nav >
+                </div>
+                <div class="col-md-9">
+                    <section class="welcome">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                               <h2 class="dark-text">Introduction<hr></h2>
+                                <div class="row">
+
+                                    <div class="col-md-12 full">
+                                        <div class="intro1">
+                                            <ul>
+                                                <li><strong>Mod : </strong>GalaxyRP</li>
+                                                <li><strong>Item Version : </strong> v 3.0</li>
+                                                <li><strong>Author  : </strong> <a href="https://github.com/alexnita3" target="_blank">Alex</a></li>
+                                                <li><strong>License : </strong> <a href="https://github.com/alexnita3/GalaxyRP/blob/develop/LICENSE.txt" target="_blank">GPL v2.0</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <hr>
+                                        <div>
+                                            <p>
+                                                First of all, Thank you so much for trying the mod out, I'm sure you'll find it offers a lot of useful features.
+                                            </p>
+
+                                            <p>This documentation is to help you navigate through the plethora of features the mod offers. I realise it might not be the easiest to use (yet!), but once you get used to how commands works, it's a breeze.</p>
+
+                                            <h4>Requirements</h4>
+                                            <p>The mod requires the following specifications</p>
+                                            <ol>
+
+                                                <li>Windows XP/Vista/10</li>
+                                                <li>100% DirectX 9.0a compatible computer</li>
+                                                <li>PIII or Athlon class 450Mhz or faster</li>
+                                                <li>512MB RAM</li>
+                                                <li>32MB OpenGL 1.4 compatible 3D Hardware Accelerator</li>
+                                                <li>16-bit DirectX 9.0a compatible sound card</li>
+                                            </ol>
+                                            <div class="intro2 clearfix">
+                                                <p><i class="fa fa-exclamation-triangle"></i> Obviously, the more powerful your computer, the better it will run. (to a point)
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- end row -->
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line1" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Features <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    
+                                    <h2>General Mod Features</h2>
+                                    
+                                    The mod allows server owners to change weapon shot speeds, damages, max ammo, max force power.
+                                    Players can also kickflip enemies by jumping and pressing Jump key right before hitting the enemy.
+                                    Blaster pistol does not have infinite ammo.
+                                    Cloak Item does not have fuel, it is infinite, bu it can be disabled by enemies who use etectric attacks against the cloaked player.
+                                    Jetpack fuel is not infinite, but lasts a lot longer.
+                                    Force Field holdable item has more hp.
+                                    Jetpack does not have limit to fly up, so you can really fly to the sky with it.</br>
+                                
+                                    The mod contains these following main features:
+                                    <ol>
+                                        <li>An account system</li>
+                                        <li>A level system, and skill points system</li>
+                                        <li>An admin system with admin commands. These can be given one by one to each account</li>
+                                        <li>Acount settings, which the player can configure to turn on or off some features</li>
+                                        <li>A Racing Mode, with prize for the winner</li>
+                                        <li>A Duel Tournament system, with prize for the winner</li>
+                                        <li>Credits, which can be used to buy and sell stuff while roleplaying</li>
+                                        <li>A skill counter</li>
+                                        <li>An ally system, which allows a player to add or remove allies</li>
+                                        <li>An emote system, together with 57 worded emotes, with a further 3000 accessible by id</li>
+                                        <li>Players can call vote to single player maps.</li>
+                                        <li>Siege voice chat in FFA gametype</li>
+                                        <li>An entity system, which allows players to add, edit, list and remove entities that are in the map</li>
+                                        <li>Commands to remap shaders in a map</li>
+                                        <li>A client-side plugin with menus</li>
+                                        <li>Many cvars at server.cfg to customize mod features</li>
+                                    </ol>
+                                
+                                </p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line2" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Installation <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="intro2 clearfix">
+                            <p>
+                                Community leaders will have to install the Server Side Mod on their server, while players will need to install the clientside only.</br>
+                                !!!The mod works without players installing the client-side mod, but some features may not work properly!!!</br>
+                                !!!Be aware that the mod is only tested on WINDOWS-based hosts. While it likely works on linux-based hosts as well, I do not guaratee it, and you will have to compile the linux files yourself.!!!
+                            </p>
+                        </div>
+
+                        <p>
+                            This section will look at installing the mod, as well as go through some settings that I advise server owners to do.</br>
+                            I will be using a host called Bluefang for this guide, so you must adapt the settings and commands to your own host should it be any different. </br>
+                        </p>
+
+                        <hr>
+
+                        <h4>Server-Side.</h4>
+
+                        <p>Firstly, make sure that you have the latest version of the mod downloaded from the online repository. If you are usure about which version you have, you can look in the .zip filename or you can go to the repository and download the latest version again.</p>
+
+                        <a href="https://github.com/alexnita3/GalaxyRP/releases" class="btn btn-primary">All GalaxyRP Versions</a>
+
+                        <p>After you have done that, make sure your server is turned off, and you have FTP access. Go into the server files, and look for the folder where all the executables are. You will know you've found the right one when the folder structure looks like this:</p>
+
+                        <center><a href="images/upload/image1.PNG" data-rel="prettyPhoto"><img src="images/upload/image1.PNG" alt="" class="img-responsive img-thumbnail"></a></center>
+
+                        <p>Unzip the Server-side files anywhere on your system, and open the folder that was generated. (It should be called ServerSide, or something similar.) Select all the mod files, as shown below, and transfer them to the server folder mentioned in the last step. If you're asked if you want to replace any files, click on yes for each oen of them.</p>
+
+                        <center><a href="images/upload/image2.PNG" data-rel="prettyPhoto"><img src="images/upload/image2.PNG" alt="" class="img-responsive img-thumbnail"></a></center>
+
+                        <p>
+                            After the installation, go into your server control panel, and expand the "Command Line Editor" section, where you will find a few options that need changing.</br>
+                            The first will be the 'Templates' section. Click on the dropdown list, and select the option called Active Command Line Parameters.
+                            The second will be the 'Parameters' section. This is slightly trickier to modify. You will need to write down the IP address for the server, as well as the port. After you have those, you will need to paste the following command in the textbox, making sure to replace the ip address and port with your own:
+                        </p>
+
+                        <pre class="brush: html">
+                            +set fs_game GalaxyRP +set dedicated 2 +set net_ip 000.000.00.00 +set net_port 17118 +exec server.cfg
+                        </pre>
+
+                        <p>Make sure you click Update Command Line Parameters afterward. Your setting shoudl now look like this:</p>
+
+                        <center><a href="images/upload/bluefang.PNG" data-rel="prettyPhoto"><img src="images/upload/bluefang.PNG" alt="" class="img-responsive img-thumbnail"></a></center>
+
+                        <p>All you have to do now is start your server, and players can connect!</p>
+
+                        <p>Sometimes, if you find that the mod isn't working correctly, particularly saving and loading accounts, you should go to the FTP file manager, and change the permissions to all files so that they can be read, written to and executed by everyone. (Don't worry, you will still need a password to acces the files.) This option can sometimes be found as 'chmod'. If it asks you to input a number, input 777</p>
+
+                        <hr>
+
+                        <h4>Client-Side.</h4>
+
+                        <p>All you need to do is copy the Client side files into your GameData folder on your machine. After that, make sure you run openjk.x86.exe instead of jamp.exe.</p>
+
+
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line3" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Quick Start Guide (Players) <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <p>
+                                    So you've downloaded the mod and you joined a server, great! You're close to starting your roleplaying journey. This quickstart guide is meant to get you started, just follow all the steps and you'll ge good to go. By all means, look in the other categories to get a more in-depth look at what you can do.
+                                </p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 id="line3_1">1. Getting to the console </h3>
+                                    <center><a href="images/upload/console.png" data-rel="prettyPhoto"><img src="images/upload/console.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                    <p>
+                                        All the commands are inputted via the game's console. To get to it, press "`" (The key above TAB). If that doesn't work, try pressing SHIFT + ` .</br>
+                                        This is where you'll write all your commands. To do that, start typing and press enter to activate the command.</br>
+                                        If you need to get rid of the console, press the same button you used to access it.
+                                    </p>
+                                </div>
+                                <!-- end col -->
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 id="line3_2">2. Creating an account </h3>
+                                    <center><a href="images/upload/createaccount.png" data-rel="prettyPhoto"><img src="images/upload/createaccount.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                    <p>
+                                        To start playing, you will need an account. This is where all your characters and admin permissions will be stored.</br>
+                                        !!!Remember, acounts are a different thing to characters, we will get to that in the next section.!!!</br>
+                                        To create an account run the following command (Replace everything in "[" "]" with your own values, so "/new [user] [pass]" will mean that you have to enter for example "/new alex supersecretpassword").
+                                    </p>
+
+                                    <pre class="brush: html">
+                                        /new [user] [pass]
+                                    </pre>
+
+                                </div>
+                                <!-- end col -->
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 id="line3_3">3. Creating a character </h3>
+                                    <center><a href="images/upload/createchar.png" data-rel="prettyPhoto"><img src="images/upload/createchar.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                    <p>
+                                        If the account is what stores your character, your character is where all your skills, credits and items are stored. </br>
+                                        An account can have multiple characters, all at completely different levels and skills.</br>
+                                        To create your character, use:
+                                    </p>
+
+                                    <pre class="brush: html">
+                                        /char new [charactername]
+                                    </pre>
+
+                                    <p>
+                                        My suggestion is to use the character's first name as the input. So a character named "Tia Luminara" should be named "Tia" in the console.
+                                    </p>
+
+                                </div>
+                                <!-- end col -->
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 id="line3_4">4. Checking your stats and abilities </h3>
+                                    <center><a href="images/upload/stats.png" data-rel="prettyPhoto"><img src="images/upload/stats.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                    <p>
+                                        To view your character's characteristics, such as the current level or how many credits you own, use the following command:
+                                    </p>
+
+                                    <pre class="brush: html">
+                                        /list
+                                    </pre>
+
+                                    <p>
+                                        A handy command that helps you navigate the menus is:
+                                    </p>
+
+                                    <pre class="brush: html">
+                                        /list help
+                                    </pre>
+
+                                </div>
+                                <!-- end col -->
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 id="line3_5">4. Start roleplaying! </h3>
+                                    <center><a href="images/upload/roleplay.png" data-rel="prettyPhoto"><img src="images/upload/roleplay.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                    <p>
+                                        To roleplay, use the "Y" key to start typing, and press enter when you're done.</br>
+                                        !!!Remember, this chat has a limit on how far it can be "heard" from, so if your friends are too far away, they might not see what you typed!!!
+                                    </p>
+
+                                    <p>
+                                        To use the OOC (Out of character) chat, simply press "T" instead of "Y", type, and press enter.</br>
+                                        !!!Remember, the OOC char can be seen server-wide, so everyone will be able to see what you typed!!!
+                                    </p>
+
+                                    <p>
+                                        Start living your Star Wars story. :) </br>
+                                        I hope this quickguide was enough to get you started, feel free to look into other things you can do in the game, by scrolling down.
+                                        !!!Remember, roleplaying is about fun, don't get too caught up in the mechanics and start playing! In time you will learn the ins and outs of the mod!!!
+                                    </p>
+                                </div>
+                                <!-- end col -->
+                            </div>
+
+                        
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line4" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Account System <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <p>
+                            The account system allows a player to create an account in the server. It contains his admin commands, his settings,
+                            and all roleplaying stuff.
+                            </br>
+                            When creating an account, a character will be created by default with the same name as the account. The player can create further characters that are associated with the same account, without having to create multiple accounts.
+                            </br>
+                            Below a list of account system commands.
+                            The main account system commands are:
+                        </p>
+                            <pre class="brush: html">
+                                /list: this command lists all stuff you need. If not logged in, it shows how to create account and login. Shows general info, like level, exp, credits, etc.
+                            </pre>
+                            <pre class="brush: html">
+                                /list help: with this argument, /list will show you the arguments you can pass to the /list command
+                            </pre>
+                            <pre class="brush: html">
+                                /new [login] [password]: registers a new account.
+                            </pre>
+                            <pre class="brush: html">
+                                /changepassword [new_password]: allows a logged-in player to change his password.
+                            </pre>
+                            <pre class="brush: html">
+                                /logout: allows the player to logout his account.
+                            </pre>
+                            <pre class="brush: html">
+                                /logout: allows the player to logout his account.
+                            </pre>
+                        
+                        <p>
+                            The mod allows the management of Characters into the same account. Every account has a default char which has the same name as your login/username. You can create new ones, delete some of them (except the default one), duplicate (create a copy of) the current char in use, choose which one to use, rename the current char, and even migrate chars to another account.
+                        </p>
+                            <pre class="brush: html">
+                                /char: List the characters associated with the current account.
+                            </pre>
+                            <pre class="brush: html">
+                                /char new [charname]: Creates a new character.
+                            </pre>
+                            <pre class="brush: html">
+                                /char delete [charname]: Deletes a character. !!!THIS CANNOT BE UNDONE!!!
+                            </pre>
+                            <pre class="brush: html">
+                                /char duplicate: Duplicates the current character.
+                            </pre>
+                            <pre class="brush: html">
+                                /char use [charname]: Switches to a different character.
+                            </pre>
+                            <pre class="brush: html">
+                                /char rename [new charname]: Renames the current character.
+                            </pre>
+                            <pre class="brush: html">
+                                /char migrate [charname] [acc login] [acc password]: Migrates the character to a different account.
+                            </pre>
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line5" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Admin System <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <p>The mod has some admin commands.</br>
+                        Each player account can have a specific set of admin commands.</br>
+                        More info about the admin commands can be found ingame.</br>
+                        Below the console commands to manage the admin commands:</p>
+
+                        <pre class="brush: html">
+                            /adminlist: allows a player to see which admin commands he currently has. If you pass a command number as argument, shows info about it. 
+                        </pre>
+                        <pre class="brush: html">
+                            /adminlist show [player id or name]: If player has GiveAdmin, he can use this to see admin commands of another player
+                        </pre>
+                        <pre class="brush: html">
+                            /adminup [player name or ID] [admin command number]: gives an admin command to the player. You must have the GiveAdmin allowed in your account to use this command.
+                        </pre>
+                        <pre class="brush: html">
+                            /admindown [player name or ID] [admin command number]: removes an admin command from the player. You must have the GiveAdmin allowed in your account to use this command.
+                        </pre>
+                        <pre class="brush: html">
+                            /rcon giveadmin [player name or ID]: gives the GiveAdmin permission in the target player account. This will allow him to give or remove admin commands.
+                        </pre>
+
+                        <p>Some examples of commands that admins can use can be found below:</p>
+
+                        <pre class="brush: html">
+                            /npc: spawns or kills npcs
+                        </pre>
+                        <pre class="brush: html">
+                            /noclip: allows a player to fly and to get through everything in the map
+                        </pre>
+                        <pre class="brush: html">
+                            /teleport: allows a player to teleport to a specific point, to a player or to some coordinates in the map
+                        </pre>
+                        <pre class="brush: html">
+                            /silence: makes a player unable to chat
+                        </pre>
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line6" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Roleplaying Basics <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <p>In this Mod, the player can get credits, get levels, use skill points to get new skills, play quests, and buy and sell stuff.
+
+                                    <br>
+                                    
+                                    When an admin determines the time is right, the player gets a new level. Each level increases 2 HP + 2 shield + 3 FP.
+                                    
+                                    </br>
+                                    
+                                    There are 56 skills available in Galaxy RP. They include force powers, weapons, ammo, items and some miscellaneous stuff.
+                                    They are divided in 5 categories in the command /list:
+                                </p>
+
+                                    <pre class="brush: html">
+                                        /list force: lists the force powers and saber skills.
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /list weapons: lists weapons
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /list other: lists miscellaneous skills and the special powers the player currently has
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /list ammo: lists ammo skills, which increase the starting ammo in the player weapons
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /list items: lists the holdable items that the player can start with
+                                    </pre>
+                                    
+                                <p>
+                                    When a player gets a new level, he also gets skill points. AN admin can upgrade or downgrade skills with them.
+                                    The commands to upgrade and downgrade skills are:
+                                </p>
+
+                                    <pre class="brush: html">
+                                        /skillup [skill number]: upgrades a skill. Requires at least 1 skill point
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /skilldown [skill number]: downgrades a skill. The player recovers 1 skill point
+                                    </pre>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 id="line6_1">Credit System </h3>
+                                    <center><a href="images/upload/creditsystem.png" data-rel="prettyPhoto"><img src="images/upload/creditsystem.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                    <p>
+                                        With credits, the player can buy and sell stuff. To do that, he must call the jawa seller.
+                                        By pressing the Use Key on him, he will talk to the player and say what commands to use.
+                                        To buy or sell things, the player must be near the seller and use the appropriate commands.
+
+                                        <h4>Upgrades</h4>
+                                        
+                                        Most of the stuff the seller sells are temporary ones. If the player dies, he loses them and must buy again.
+                                        The upgrades are permanent stuff that will not be lost even if the player dies. 
+                                        It is very important to buy them, because of the benefits they give.
+                                        
+                                        <h4>Giving Credits to other players</h4>
+                                        
+                                        A player can give credits to another RPG player. Credits can also be spent, essentially deleting them from the players account without them ending up in a different one.
+                                        This can be used to create different roleplaying scenarios that involve NPCs.
+                                        
+
+                                    </p>
+
+                                    <p>A list of commands can be found below:</p>
+
+                                    <pre class="brush: html">
+                                        /callseller: Spawns the Jawa seller. 
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /stuff: Shows available items to buy form the seller.
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /buy [product number]: buys an item.
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /givecredits [playername or ID]: Transfers the credits to another player.
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /spendcredits [amount]: deletes credits form their account, thus paying for something without having to tranfer the money to someone else.
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /createcredits [player] [amount]: An admin command that allows admins to add credits into the economy.
+                                    </pre>
+
+                                </div>
+                                <!-- end col -->
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line6_2">Ally System </h3>
+                                <p>
+                                    The player can have allies, players which will not receive damage from him, this is particularly useful in group fights.</br> 
+                                    Allies also have a dedicated chat, separate to the team and general chats.</br>
+                                    There are 3 commands to manage allies:
+                                </p>
+                                <pre class="brush: html">
+                                    /allylist: this command lists the players added as allies
+                                </pre>
+                                <pre class="brush: html">
+                                    /allyadd [player name or ID]: adds the target player as an ally
+                                </pre>
+                                <pre class="brush: html">
+                                    /allyremove [player name or ID]: removes the target player from your ally list
+                                </pre>
+                                <pre class="brush: html">
+                                    /allychat: chat with allies
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line6_3">Emotes </h3>
+                                <center><a href="images/upload/emotesystem.png" data-rel="prettyPhoto"><img src="images/upload/emotesystem.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                <p>
+                                    Emotes are allowed by a server cvar. They can be used by players to animate their character in specific poses.</br>
+                                    There are two types of emotes supported by the mod: worded and generic. </br>
+                                    Worded emotes are easier to remember and are more common, they are defined by a word, instead of a number, while generic emotes are defined by an ID, between 0 and 1542. 
+                                </p>
+
+                                <p>The pertinent commands are as follows:</p>
+                                <pre class="brush: html">
+                                    /emote list: shows a list of worded emotes.
+                                </pre>
+                                <pre class="brush: html">
+                                    /emote [number]: plays a generic animation.
+                                </pre>
+                                <pre class="brush: html">
+                                    /emote [word]: plays a worded animation from the list.
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line6_4">NPC Ordering System </h3>
+                                <p>
+                                    It is possible to make npcs follow you by pressing Use key on them. While they are following, you can give orders to them by using /order [option].
+                                    Option may be:
+
+                                    follow: makes npc follow you. He will attack enemy npcs
+                                    guard: makes the npc stand still, guarding the area. He will attack every player who is not your ally, and other npcs
+                                    cover: makes npc follow you and attack every player who is not your ally, and other npcs
+                                </p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line12" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Chat Basics <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <p>
+                                    GalaxyRP is made with text roleplaying in mind. While it isn't mandatory to use it, if you want to, read this section to find out how to use the chat to the fullest.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line12_1">OOC chat </h3>
+                                <center><a href="images/upload/ooc.png" data-rel="prettyPhoto"><img src="images/upload/ooc.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                    <p>
+                                        OOC chat is where you can talk to your friend outside of your character. Here is where reactions to funny IG events and snarky jokes go. :)
+                                    </p>
+
+                                    <p>
+                                        To access it, press the default key (T) and a ui element will pop out where you can type. You will notice that after pressing enter, your messages will display in red, and wil have "((" "))" around the actual message.</br>
+                                        This chat will also be broadcast across the server regardless of distance.
+                                    </p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line12_2">Say chat </h3>
+                                <center><a href="images/upload/say.png" data-rel="prettyPhoto"><img src="images/upload/say.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                <p>
+                                    This is where the magic goes. The say chat is where you'll talk through your character. To acces it, press the default key (Y) and type your message.</br>
+                                    !!!BEWARE this chat has a limit on distance, so some of your friends might not hear you if ythey're sittiing too far away.!!!</br>
+                                    This can be changed by typing in /long [your message] IN THE CHAT WINDOW (Y), as opposed to the console. This will make your messages be displayed to players further away from you.</br>
+                                    Read the next sections to learn about other chat modifiers.
+                                </p>
+                                <pre class="brush: html">
+                                    /long [your message]: CHAT MODIFIER that makes your messges broadcast for longer distances.
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line12_3">Actions </h3>
+                                <center><a href="images/upload/action.png" data-rel="prettyPhoto"><img src="images/upload/action.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                <p>
+                                    Actions are where your character does something, such as pick up an object. This is done via a chat (Y) modifier. This will display your message in a slightly different format.
+                                </p>
+                                <pre class="brush: html">
+                                    /me [your message]: CHAT MODIFIER that displays an action taken by your character.
+                                </pre>
+                                <p>
+                                    There are three further modifiers that can be added to this one. All they do is increase or decrease the range at which they're displayed.
+                                </p>
+                                <pre class="brush: html">
+                                    /melong [your message]: CHAT MODIFIER that displays an action taken by your character. (Longer Range)
+                                </pre>
+                                <pre class="brush: html">
+                                    /melow [your message]: CHAT MODIFIER that displays an action taken by your character. (Shorter Range)
+                                </pre>
+                                <pre class="brush: html">
+                                    /meall [your message]: CHAT MODIFIER that displays an action taken by your character. (Broadcasts it to the whole server)
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line12_4">Descriptions </h3>
+                                <center><a href="images/upload/description.png" data-rel="prettyPhoto"><img src="images/upload/description.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                <p>
+                                    Descriptions are where something happens to the world around your character, and you wish to convery that. Or simply describe an object. This is done via a chat (Y) modifier. It will display your message in a slightly different format.
+                                </p>
+                                <pre class="brush: html">
+                                    /do [your message]: CHAT MODIFIER that displays a description taken by your character.
+                                </pre>
+                                <p>
+                                    There are three further modifiers that can be added to this one. All they do is increase or decrease the range at which they're displayed.
+                                </p>
+                                <pre class="brush: html">
+                                    /dolong [your message]: CHAT MODIFIER that displays a description taken by your character. (Longer Range)
+                                </pre>
+                                <pre class="brush: html">
+                                    /dolow [your message]: CHAT MODIFIER that displays a description taken by your character. (Shorter Range)
+                                </pre>
+                                <pre class="brush: html">
+                                    /doall [your message]: CHAT MODIFIER that displays a description taken by your character. (Broadcasts it to the whole server)
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line12_5">Force actions </h3>
+                                <center><a href="images/upload/forceaction.png" data-rel="prettyPhoto"><img src="images/upload/forceaction.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                <p>
+                                    Force actions are where your character does an action using the Force. This is done via a chat (Y) modifier. It will display your message in a slightly different format.
+                                </p>
+                                <pre class="brush: html">
+                                    /force [your message]: CHAT MODIFIER that displays a Force Action taken by your character.
+                                </pre>
+                                <p>
+                                    There are three further modifiers that can be added to this one. All they do is increase or decrease the range at which they're displayed.
+                                </p>
+                                <pre class="brush: html">
+                                    /forcelong [your message]: CHAT MODIFIER that displays a a Force Action taken by your character. (Longer Range)
+                                </pre>
+                                <pre class="brush: html">
+                                    /forcelow [your message]: CHAT MODIFIER that displays a a Force Action taken by your character. (Shorter Range)
+                                </pre>
+                                <pre class="brush: html">
+                                    /forceall [your message]: CHAT MODIFIER that displays a a Force Action taken by your character. (Broadcasts it to the whole server)
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line12_6">Shouting </h3>
+                                <center><a href="images/upload/shout.png" data-rel="prettyPhoto"><img src="images/upload/shout.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                <p>
+                                    Shouting is where your character shouts something. Not necessarily in anger, can be just speaking louder. This is done via a chat (Y) modifier. It will display your message in a slightly different format.
+                                </p>
+                                <pre class="brush: html">
+                                    /shout [your message]: CHAT MODIFIER that displays a shout taken by your character.
+                                </pre>
+                                <p>
+                                    There are three further modifiers that can be added to this one. All they do is increase or decrease the range at which they're displayed.
+                                </p>
+                                <pre class="brush: html">
+                                    /shoutlong [your message]: CHAT MODIFIER that displays a shout taken by your character. (Longer Range)
+                                </pre>
+                                <pre class="brush: html">
+                                    /shoutall [your message]: CHAT MODIFIER that displays a shout taken by your character. (Broadcasts it to the whole server)
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line12_7">Lowering your voice </h3>
+                                <center><a href="images/upload/loweredvoice.png" data-rel="prettyPhoto"><img src="images/upload/loweredvoice.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                <p>
+                                    Lowering your voice is where your character speaks in hushed tones, and can only be seen by people very close by. This is done via a chat (Y) modifier. It will display your message in a slightly different format.
+                                </p>
+                                <pre class="brush: html">
+                                    /low [your message]: CHAT MODIFIER that displays a shout taken by your character.
+                                </pre>
+                                <p>
+                                    There are no further modifiers that apply to this option.
+                                </p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line7" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Entity System <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <center><a href="images/upload/entitysystem.png" data-rel="prettyPhoto"><img src="images/upload/entitysystem.png" alt="" class="img-responsive img-thumbnail"></a></center>
+
+                                <p>The mod allows players with the admin flag Entity System set in their accounts to manipulate entities in the map, without having to download the tools, or have mapping knowledge.</br>
+                                Commonly, this can be used to add different lightling, change the skybox to have a night/day cycle.
+                                </br>
+                                    The relevant commands are:
+                                </p>
+
+                                    <pre class="brush: html">
+                                        /entitysystem: shows the commands to manipulate entities
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /entadd: adds an entity in the map
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /entedit: edits an entity in the map
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /entlist [keyword]: lists entities in the map
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /entorigin: sets the current point and angles where you are standing as the origin and angles for new entities added with /entadd command
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /entundo: removes the last added entity
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /entremove: removes an entity from the map
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /entsave [filename]: saves the entities into a file. If the filename is called default, the entities will be loaded when map is loaded
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /entload [filename]: loads entities from a file
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /entdeletefile: deletes an entity file created by entsave command
+                                    </pre>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 id="line7_1">Entity List </h3>
+                                    <p>
+                                        Below, a list of entities supported by /entsave and /entload commands, with the fields you can pass to them.
+                                    </p>
+
+                                    <pre class="brush: html">
+                                        -- emplaced_gun
+
+                                        "spawnflags"
+                                        1 - can respawn
+                                        1024 - allow placing at the exact origin field set with entadd
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+
+
+                                        -- func_bobbing
+
+                                        "spawnflags"
+                                        1 - x axis of bobbing
+                                        2 - y axis of bobbing
+                                        1024 - allows setting a solid .md3 model
+
+                                        "speed" - seconds to complete a bob cycle (4 default)
+                                        "dmg" - damage to inflict when blocked (2 default)
+                                        "phase" - the 0.0 to 1.0 offset in the cycle to start at
+                                        "height" - amplitude of bob (32 default)
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "angles2" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "model2" - .md3 model
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+
+
+                                        -- func_breakable
+
+                                        "spawnflags"
+                                        1 - invincible
+                                        16 - can only be damaged by sabers
+                                        32 - can only be damaged by heavy weapons
+                                        128 - usable by player
+                                        1024 - allows setting a solid .md3 model
+
+                                        "material" - type of material (integer number), can be one of the following
+                                        0  - metal
+                                        1  - glass
+                                        2  - electrical
+                                        3  - electric metal
+                                        4  - dark stone
+                                        5  - light stone
+                                        6  - glass metal
+                                        7  - electronic metal
+                                        8  - none
+                                        9  - grey stone
+                                        10 - mix of 0 and 7
+                                        11 - yellow multi-colored crates
+                                        12 - grate chunks
+                                        13 - 
+                                        14 - red multi-colored chunks
+                                        15 - white metal
+                                        16 - mix of gray and brown rocks
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "angles2" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "model2" - .md3 model
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "health" - amount of health of this breakable entity
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "mass"
+                                        "radius"
+                                        "playfx" - path of effect to play on death
+
+
+                                        -- func_button
+
+                                        "spawnflags"
+                                        64 - usable by player
+                                        1024 - allows setting a solid .md3 model
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "angles2" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "model2" - .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "speed"
+                                        "wait" - wait time between uses
+
+
+                                        -- func_door
+
+                                        "spawnflags"
+                                        1 - start as an opened door
+                                        16 - locked door
+                                        64 - usable by player
+                                        128 - inactive
+                                        1024 - allows making the .md3 model solid
+
+                                        "lip" - lip remaining at end of move (8 default)
+                                        "dmg" - damage (2 default)
+                                        "speed"		movement speed (100 default)
+                                        "wait"		wait before returning (3 default, -1 = never return)
+                                        "delay"		when used, how many seconds to wait before moving - default is none
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - door opening direction. Values of each axis must be between -179 and 179
+                                        "angles2" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "model2" - .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+                                        "zykmodelscale" - scale factor for the .md3 model2 value (default 100)
+                                        "soundset" - soundset to play when entity moves
+
+
+                                        -- func_glass
+
+                                        "spawnflags"
+                                        1 - Invincible
+                                        64 - usable by player
+                                        128 - inactive
+                                        1024 - allows setting a solid .md3 model
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "angles2" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "model2" - .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "color" - constantLight color
+                                        "light" - constantLight radius
+                                        "maxshards" - Max number of shards to spawn on glass break
+
+
+                                        -- func_pendulum
+
+                                        "spawnflags"
+                                        64 - usable by player
+                                        128 - inactive
+                                        1024 - allows setting a solid .md3 model
+
+                                        "phase" - the 0.0 to 1.0 offset in the cycle to start at
+                                        "dmg" - damage to inflict when blocked (2 default)
+                                        "message" - phase (float number)
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "angles2" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "model2" - .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+
+
+                                        -- func_plat
+
+                                        "spawnflags"
+                                        64 - usable by player
+                                        128 - inactive
+                                        1024 - allows setting a solid .md3 model
+                                        4096 - allows it to return even if a player is standing on it
+
+                                        "lip" - lip (float number)
+                                        "height" - height the lift can reach (float number)
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "angles2" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "model2" - .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+                                        "soundset" - soundset to play when entity moves
+                                        "wait"
+                                        "speed"
+
+
+                                        -- func_rotating
+
+                                        "spawnflags"
+                                        2 - show on radar
+                                        4 - rotation on z axis
+                                        8 - rotation on x axis
+                                        64 - usable by player
+                                        128 - inactive
+                                        1024 - allows setting a solid .md3 model
+
+                                        "material" - type of material (integer number), can be one of the following
+                                        0  - metal
+                                        1  - glass
+                                        2  - electrical
+                                        3  - electric metal
+                                        4  - dark stone
+                                        5  - light stone
+                                        6  - glass metal
+                                        7  - electronic metal
+                                        8  - none
+                                        9  - grey stone
+                                        10 - mix of 0 and 7
+                                        11 - yellow multi-colored crates
+                                        12 - grate chunks
+                                        13 - 
+                                        14 - red multi-colored chunks
+                                        15 - white metal
+                                        16 - mix of gray and brown rocks
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "angles2" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "model2" - .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "speed"
+                                        "health"
+                                        "model2scale" - set the model scale
+                                        "zykmodelscale" - scale factor for the .md3 model2 value (default 100)
+
+
+                                        -- func_static
+
+                                        "spawnflags"
+                                        1 - Pushable
+                                        2 - Pullable
+                                        4 - switch shader
+                                        64 - usable by player
+                                        128 - inactive
+                                        1024 - allows setting a solid .md3 model
+
+                                        "hyperspace" - test for hyperspace (0 or 1 value)
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "angles2" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "model2" - .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "zykmodelscale" - scale factor for the .md3 model2 value (default 100)
+                                        "script_targetname" - used by scriptrunners
+
+
+                                        -- func_timer
+
+                                        "spawnflags"
+                                        64 - usable by player
+                                        128 - inactive
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "random" - random time added to wait time
+                                        "wait" - wait time between uses
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+
+
+                                        -- func_train
+
+                                        A lift that travels through path_corner entities. Place each path_corner before placing the func_train
+
+                                        "spawnflags"
+                                        64 - usable by player
+                                        128 - inactive
+                                        1024 - allows setting a solid .md3 model
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "angles2" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "model2" - .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+                                        "soundset" - soundset to play when entity moves
+                                        "dmg"
+
+
+                                        -- func_usable
+
+                                        "spawnflags"
+                                        64 - usable by player
+                                        128 - inactive
+                                        1024 - allows setting a solid .md3 model
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "angles2" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "model2" - .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+                                        "health"
+                                        "wait" - wait time between uses
+
+
+                                        -- func_wall
+
+                                        "spawnflags"
+                                        64 - usable by player
+                                        128 - inactive
+                                        1024 - allows setting a solid .md3 model
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "angles2" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "model2" - .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+
+
+                                        -- fx_rain
+                                        -- fx_snow
+                                        -- fx_spacedust
+
+                                        These entities have no fields to be set
+
+
+                                        -- fx_runner
+
+                                        "spawnflags"
+                                        1 - start off
+                                        2 - one shot, fires only when used
+                                        4 - does damage
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "fxfile" - effect file to be used
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "splashdamage" - amount of damage
+                                        "splashradius" - radius in which this entity damages
+                                        "soundset" - sound this effect will make
+
+
+                                        -- info_notnull
+                                        -- info_null
+                                        -- info_player_deathmatch
+                                        -- info_player_duel
+                                        -- info_player_duel1
+                                        -- info_player_duel2
+                                        -- info_player_intermission
+                                        -- info_player_intermission_blue
+                                        -- info_player_intermission_red
+                                        -- info_player_siegeteam1
+                                        -- info_player_siegeteam2
+                                        -- info_player_start
+                                        -- info_player_start_blue
+                                        -- info_player_start_red
+
+                                        Spawnpoints, for each gametype
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+
+
+                                        -- item_shield_sm_instant
+                                        -- item_shield_lrg_instant
+                                        -- item_medpak_instant
+                                        -- item_seeker
+                                        -- item_shield
+                                        -- item_medpac
+                                        -- item_medpac_big
+                                        -- item_binoculars
+                                        -- item_sentry_gun
+                                        -- item_jetpack
+                                        -- item_healthdisp
+                                        -- item_ammodisp
+                                        -- item_eweb_holdable
+                                        -- item_cloak
+                                        -- item_force_enlighten_light
+                                        -- item_force_enlighten_dark
+                                        -- item_force_boon
+                                        -- item_ysalimari
+                                        -- weapon_stun_baton
+                                        -- weapon_melee
+                                        -- weapon_saber
+                                        -- weapon_blaster_pistol
+                                        -- weapon_concussion_rifle
+                                        -- weapon_bryar_pistol
+                                        -- weapon_blaster
+                                        -- weapon_disruptor
+                                        -- weapon_bowcaster
+                                        -- weapon_repeater
+                                        -- weapon_demp2
+                                        -- weapon_flechette
+                                        -- weapon_rocket_launcher
+                                        -- ammo_thermal
+                                        -- ammo_tripmine
+                                        -- ammo_detpack
+                                        -- weapon_thermal
+                                        -- weapon_trip_mine
+                                        -- weapon_det_pack
+                                        -- weapon_emplaced
+                                        -- weapon_turretwp
+                                        -- ammo_blaster
+                                        -- ammo_powercell
+                                        -- ammo_metallic_bolts
+                                        -- ammo_rockets
+                                        -- ammo_all
+                                        -- item_redcube
+                                        -- item_bluecube
+
+                                        "spawnflags"
+                                        1 - Suspended
+                                        4 - Allow npc to get the item
+                                        65536 - allow setting the wait field
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "wait" - time to respawn this item
+                                        "count" - amount of ammo that the player recover when getting the item
+
+
+                                        -- light
+
+                                        A light, that can be switch by another entity (for example, a trigger_multiple).
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity. Must be set
+                                        "style" - light style to use when turn on
+                                        "switch_style" - light style to use when switch
+                                        "style_off" - light style to use when off
+
+
+                                        -- misc_bsp
+
+                                        Allows spawning a .bsp map inside the current one
+
+                                        "spawnflags"
+                                        "angle" - rotate the .bsp map
+                                        "bspmodel" - the name of the .bsp file
+
+
+                                        -- misc_ammo_floor_unit
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "count" - max charge
+
+
+                                        -- misc_model_ammo_power_converter
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+
+
+                                        -- misc_model_ammo_rack
+
+                                        "spawnflags"
+                                        1 - Blaster
+                                        2 - Metal Bolts
+                                        4 - Rockets
+                                        8 - spawns weapons matching ammo type of rack
+                                        16 - med pak
+                                        32 - Power Cell
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+
+
+                                        -- misc_model_breakable
+
+                                        Spawn an .md3 model, that can have health
+
+                                        "spawnflags"
+                                        1 - solid model
+                                        128 - usable by player
+                                        4096 - start off
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "zykmodelscale" - scale factor for the .md3 model value (default 100)
+                                        "script_targetname" - used by scriptrunners
+                                        "usescript" - used by scriptrunners, name of the script to run
+
+
+                                        -- misc_model_gun_rack
+
+                                        "spawnflags"
+                                        1 - Blaster Rifle
+                                        2 - Repeater
+                                        4 - Rocket Launcher
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+
+
+                                        -- misc_model_health_power_converter
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "count" - max charge
+
+
+                                        -- misc_model_shield_power_converter
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "count" - max charge
+
+
+                                        -- misc_portal_surface
+
+                                        The portal surface nearest this entity will show a view from the targeted misc_portal_camera, or a mirror view if untargeted
+                                        This must be within 64 world units of the surface!
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "target" - misc_portal_camera targeted by this misc_portal_surface
+
+
+                                        -- misc_portal_camera
+
+                                        The target for a misc_portal_surface.  You can set either angles or target another entity to determine the direction of view
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - use the angles to set the direction of view
+                                        "roll" - an angle modifier to orient the camera around the target vector
+                                        "target" - can be used to target a target_position entity so it has the direction of view pointed to the target
+
+
+                                        -- misc_shield_floor_unit
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "count" - max charge
+
+
+                                        -- misc_turret
+
+                                        "spawnflags"
+                                        1 - Start off
+                                        2 - upside down
+                                        4 - can respawn
+                                        8 - turbo laser
+                                        16 - aim will target ahead of enemy, "lead" them
+                                        32 - show on radar
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "mass" - shotspeed
+                                        "dmg" - damage of each shot
+                                        "health" - health
+                                        "radius" - range to detect enemies and shoot them
+                                        "count" - time in miliseconds before respawning
+                                        "wait" - wait time between shots
+
+
+                                        -- misc_turretG2
+
+                                        "spawnflags"
+                                        1 - Start off
+                                        2 - upside down
+                                        4 - can respawn
+                                        8 - turbo laser
+                                        16 - aim will target ahead of enemy, "lead" them
+                                        32 - show on radar
+                                        32768 - if upside-down (spawnflag 2), do not make the z position a bit lower
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "shotspeed" - shotspeed
+                                        "dmg" - damage of each shot
+                                        "health" - health
+                                        "radius" - range to detect enemies and shoot them
+                                        "count" - time in miliseconds before respawning
+                                        "wait" - wait time between shots
+
+
+                                        -- npc_alora
+                                        -- npc_bartender
+                                        -- npc_bespincop
+                                        -- npc_bobafett
+                                        -- npc_chewbacca
+                                        -- npc_colombian_emplacedgunner
+                                        -- npc_colombian_rebel
+                                        -- npc_colombian_soldier
+                                        -- npc_cultist
+                                        -- npc_cultist_commando
+                                        -- npc_cultist_destroyer
+                                        -- npc_cultist_saber
+                                        -- npc_cultist_saber_powers
+                                        -- npc_desann
+                                        -- npc_droid_assassin
+                                        -- npc_droid_atst
+                                        -- npc_droid_gonk
+                                        -- npc_droid_interrogator
+                                        -- npc_droid_mark1
+                                        -- npc_droid_mark2
+                                        -- npc_droid_mouse
+                                        -- npc_droid_probe
+                                        -- npc_droid_protocol
+                                        -- npc_droid_r2d2
+                                        -- npc_droid_r5d2
+                                        -- npc_droid_remote
+                                        -- npc_droid_saber
+                                        -- npc_droid_seeker
+                                        -- npc_droid_sentry
+                                        -- npc_galak
+                                        -- npc_gran
+                                        -- npc_hazardtrooper
+                                        -- npc_human_merc
+                                        -- npc_imperial
+                                        -- npc_impworker
+                                        -- npc_jan
+                                        -- npc_jawa
+                                        -- npc_jedi
+                                        -- npc_kothos
+                                        -- npc_kyle
+                                        -- npc_lando
+                                        -- npc_lannik_racto
+                                        -- npc_luke
+                                        -- npc_manuel_vergara_rmg
+                                        -- npc_merchant
+                                        -- npc_minemonster
+                                        -- npc_monmothma
+                                        -- npc_monster_claw
+                                        -- npc_monster_fish
+                                        -- npc_monster_flier2
+                                        -- npc_monster_glider
+                                        -- npc_monster_howler
+                                        -- npc_monster_lizard
+                                        -- npc_monster_murjj
+                                        -- npc_monster_mutant_rancor
+                                        -- npc_monster_rancor
+                                        -- npc_monster_sand_creature
+                                        -- npc_monster_swamp
+                                        -- npc_monster_wampa
+                                        -- npc_morgankatarn
+                                        -- npc_noghri
+                                        -- npc_player
+                                        -- npc_prisoner
+                                        -- npc_ragnos
+                                        -- npc_rax
+                                        -- npc_rebel
+                                        -- npc_reborn
+                                        -- npc_reborn_new
+                                        -- npc_reelo
+                                        -- npc_rockettrooper
+                                        -- npc_rodian
+                                        -- npc_rosh_penin
+                                        -- npc_saboteur
+                                        -- npc_shadowtrooper
+                                        -- npc_snowtrooper
+                                        -- npc_stormtrooper
+                                        -- npc_stormtrooperofficer
+                                        -- npc_swamptrooper
+                                        -- npc_tavion
+                                        -- npc_tavion_new
+                                        -- npc_tie_pilot
+                                        -- npc_trandoshan
+                                        -- npc_tusken
+                                        -- npc_ugnaught
+                                        -- npc_weequay
+                                        -- npc_vehicle
+                                        -- npc_spawner
+
+                                        Spawns a npc or vehicle
+
+                                        "spawnflags"
+                                        32 - No target (npcs have no AI)
+                                        32768 - allows setting the genericvalue7 field, which is a custom amount of credits this npc gives when rpg player defeats him
+                                        65536 - will not multiply wait and delay by 1000
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "npc_type" - npc or vehicle to be spawned
+                                        "count" - amount of npcs to spawn before this entity is removed. Set to -1 so it will never be removed
+                                        "wait" - time to try again to spawn if the npc is blocked
+                                        "delay" - time to wait before actually spawning the npc after this entity is triggered
+                                        "genericvalue7" - used with spawnflag 32768, amount of credits this npc gives when defeated by rpg player
+
+
+                                        -- path_corner
+
+                                        Points to which a func_train can go
+
+                                        "spawnflags"
+                                        "wait" - time to wait before going to next path_corner
+                                        "speed" - speed with which func_train goes to next path_corner
+                                        "origin" - point in the map where the entity will be placed
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+
+
+                                        -- target_activate
+                                        -- target_deactivate
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+
+
+                                        -- target_counter
+
+                                        "spawnflags"
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+                                        "count" - current count (default 2)
+                                        "bouncecount" - max times to count before firing targets
+
+
+                                        -- target_delay
+
+                                        "spawnflags"
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+                                        "delay" - same as wait
+                                        "wait" - time to wait before firing targets
+                                        "random" - random time added to wait
+                                        "targetshadername" - the original shader of this entity that will be replaced by a new one
+                                        "targetshadernewname" - replace the original shader (targetshadername) with this new one
+
+
+                                        -- target_kill
+
+                                        Kills the user of this entity
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+
+
+                                        -- target_play_music
+
+                                        Starts playing music
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "music" - music file to play
+
+
+                                        -- target_position
+
+                                        Used as a position for trigger_teleport entities
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+
+
+                                        -- target_print
+
+                                        Prints a message in the screen
+
+                                        "spawnflags"
+                                        4 - Only show message to the player who activated this entity
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "message" - message to display in the screen
+
+
+                                        -- target_push
+
+                                        Pushes a player to a target at a speed
+
+                                        "spawnflags"
+                                        1 - play a sound when player gets pushed
+                                        2 - Constant push
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "speed" - speed in which the players gets pushed
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+
+
+                                        -- target_random
+
+                                        Randomly fires one of the targets each time it is used
+
+                                        "spawnflags"
+                                        1 - Use Once
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+
+
+                                        -- target_relay
+
+                                        "spawnflags"
+                                        4 - randomly fire one of targets
+                                        128 - Inactive
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+                                        "wait" - time to wait before firing targets
+                                        "targetshadername" - the original shader of this entity that will be replaced by a new one
+                                        "targetshadernewname" - replace the original shader (targetshadername) with this new one
+
+
+                                        -- target_scriptrunner
+
+                                        "spawnflags"
+                                        128 - inactive
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "script_targetname" - targetname of this scriptrunner
+                                        "usescript" - script to run when used
+                                        "count" - how many times to run. -1 = infinite
+                                        "delay" - wait time before running script after being used
+                                        "wait" - wait time between uses
+
+
+                                        -- target_speaker
+
+                                        "spawnflags"
+                                        4 - broadcast
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "noise" - sound file to play
+                                        "soundset" - sound file to play
+
+
+                                        -- team_CTF_blueplayer
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - Angles with which the player spawn
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+
+
+                                        -- team_CTF_bluespawn
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - Angles with which the player spawn
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+
+
+                                        -- team_CTF_redplayer
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - Angles with which the player spawn
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+
+
+                                        -- team_CTF_redspawn
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - Angles with which the player spawn
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+
+
+                                        -- trigger_always
+
+                                        "spawnflags"
+                                        1024 - allows setting the count field to override the default 300 miliseconds for this entity to be triggered
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - Angles with which the player spawn
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+                                        "targetshadername" - the original shader of this entity that will be replaced by a new one
+                                        "targetshadernewname" - replace the original shader (targetshadername) with this new one
+                                        "count" - time in miliseconds for this entity to be triggered by the server
+
+
+                                        -- trigger_hurt
+
+                                        "spawnflags"
+                                        8 - "no protection" damage
+                                        16 - waits one second between each time it does damage
+
+                                        "dmg" - damage to do. If -1, use fade-to-black death
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+
+
+                                        -- trigger_multiple
+
+                                        Used to trigger other entities (for example, pressing a button to call a lift, switching lights, etc)
+
+                                        "spawnflags"
+                                        4 - can use with use key
+                                        128 - inactive
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+                                        "speed" - time to wait before firing target2
+                                        "delay" - time to wait before firing targets
+                                        "genericValue7" - interval time between uses
+                                        "noise" - noise sound file
+                                        "wait" - time to wait between triggerings
+
+
+                                        -- trigger_once
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+                                        "wait" - time to wait between triggerings
+
+
+                                        -- trigger_push
+
+                                        Pushes a player to a target at a speed. The target must be a target_position entity
+
+                                        "spawnflags"
+                                        2 - Starts off
+                                        4 - Linear speed
+                                        16 - Relative speed
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "speed" - speed in which the players gets pushed
+                                        "wait" - interval time in miliseconds between pushes
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+
+
+                                        -- trigger_teleport
+
+                                        "spawnflags"
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "model" - bmodel (which startes with a *, for example, *0, *1, *2, etc). Can also be a .md3 model
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+                                        "targetname" - name of this entity. Allows it to be targeted by another entity
+                                        "target" - entity name to be targeted by this one
+                                        "target2" - entity name to be targeted by this one
+                                        "wait" - time to wait between triggerings
+
+
+                                        -- zyk_mini_game_joiner
+
+                                        "spawnflags"
+                                        1 -  Sniper Battle
+                                        2 -  Racing Mode
+                                        4 -  Melee Battle
+                                        8 -  Duel Tournament
+                                        64 - must press Use key
+
+                                        "wait" - amount of time between the entity frames, in which it verifies if a player is standing in the bounding box
+                                        "mins" - bounding box
+                                        "maxs" - bounding box
+
+
+                                        -- zyk_regen_unit
+
+                                        Regens stuff of the player
+
+                                        "spawnflags"
+                                        1 - Regen Health
+                                        2 - Regen Shield
+                                        4 - Regen Force
+                                        8 - Regen MP (Magic Power)
+                                        "origin" - point in the map where the entity will be placed
+                                        "mins" - bounding box in which player must be in to regen things
+                                        "maxs" - bounding box in which player must be in to regen things
+                                        "count" - amount to regen
+                                        "wait" - time in miliseconds between regens
+
+
+                                        -- zyk_training_pole
+
+                                        Spawns a model that can be used as a training pole for saber training. Can also show damage done to it
+
+                                        "spawnflags"
+                                        1 - Shows damage done by it after some miliseconds set in wait field
+
+                                        "origin" - point in the map where the entity will be placed
+                                        "angles" - rotate object in each axis. Values of each axis must be between -179 and 179
+                                        "wait" - time in miliseconds after last damage taken to show the damage
+                                        "model" - allows setting a .md3 model. If no model is passed. The rift statue is used
+                                        "mins" - bounding box. If no value is passed, it sets the bounding box used for players
+                                        "maxs" - bounding box. If no value is passed, it sets the bounding box used for players
+
+
+                                        -- zyk_weather
+
+                                        "spawnflags"
+                                        "mins" - bounding box of weather zone (when passing "zone" to message field)
+                                        "maxs" - bounding box of weather zone (when passing "zone" to message field)
+                                        "message" - weather type, can be one of the following:
+
+                                        rain, snow, fog, sand, wind, constantwind, gustingwind, die, clear, lightrain,
+                                        acidrain, heavyrain, spacedust, heavyrainfog, light_fog, outsideshake, outsidepain, zone
+                                    </pre>
+
+                                </div>
+                                <!-- end col -->
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line7_2">Remapping shaders </h3>
+                                <p>
+                                    It is possible to remap the shaders of anything (weapons, items, skybox, etc) with some commands </br>
+                                    Here is an example to remap the shaders of the heavy repeater weapon at origin 0 0 0:
+                                </p>
+                                <pre class="brush: html">
+                                    /remap models/weapons2/heavy_repeater/heavy_repeater_w.glm models/items/bacta
+                                </pre>
+                                <p>
+                                    Other commands to keep in mind:
+                                </p>
+                                <pre class="brush: html">
+                                    /shaderlist: shows a list of all shaders in the map.
+                                </pre>         
+                                <pre class="brush: html">
+                                    /remaplist: shows shaders already remapped.
+                                </pre>                        
+                                <pre class="brush: html">
+                                    /remapsave [filename]: saves the remapped shaders of the current map.
+                                </pre>
+                                <pre class="brush: html">
+                                    /remapload [filename]: loads the remapped shaders from the file. You can save a file called default (/remapsave default) which will make it load with the map automatically.
+                                </pre>
+                                <pre class="brush: html">
+                                    /remapdeletefile [filename]: deletes a remap file.
+                                </pre>
+                            </div>
+                            <!-- end col -->
+
+                            <p>The remap commands can only be used if the player has Entity System enabled in /adminlist</p>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line8" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Games <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <p>GalaxyRP supports a variety of gamemodes, which can be activated by all players.
+                                </br>
+                                    The relevant commands are:
+                                </p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 id="line8_1">Racing Mode </h3>
+                                    <center><a href="images/upload/racemode.png" data-rel="prettyPhoto"><img src="images/upload/racemode.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                    <p>
+                                        The mod has a racing mode, which allows players to race with swoop bikes in the Single Player t2_trip map, or to race with tauntauns in the Single Player t3_stamp map. </br>
+                                        To enter the race, use the console command /racemode. </br>
+                                        The race starts some seconds after the last player who used the command.</br>
+                                        There is a cvar in server.cfg to set the time in miliseconds for the race to start.</br>
+                                        If a player tries to start before the countdown or he leaves his vehicle during the race, he loses.</br>
+                                        Whoever finishes in first place receives a prize.
+                                    </p>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line8_2">Duel Tournament </h3>
+                                <center><a href="images/upload/dueltournament.png" data-rel="prettyPhoto"><img src="images/upload/dueltournament.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                <p>
+                                    This is a tournament of private duels. It can have up to 32 players in it. </br>
+                                    These are the commands to manage it:
+                                </p>
+
+                                <pre class="brush: html">
+                                    /duelarena: an admin command. Marks a spot in the current map as the place where the arena of the duel tournament will be placed
+                                </pre>
+                                <pre class="brush: html">
+                                    /duelpause: an admin command. Pauses or resumes a Duel Tournament
+                                </pre>
+                                <pre class="brush: html">
+                                    /duelmode: joins the duel tournament. If used again, leaves the tournament
+                                </pre>
+                                <pre class="brush: html">
+                                    /dueltable: shows the current score of the tournament players in page 1 and all the duel matches in the other pages
+                                                The red number is the total hp and shield remaining in winning duels,
+                                                used as a criteria to untie players with the same score
+                                </pre>
+
+                                <p>
+                                    <h4>How to play</h4>
+
+                                    First, an admin must place the arena in the map with /duelarena. After that, players can join the tournament with /duelmode.
+                                    After some seconds, the tournament starts, and the server chooses the players which will duel now in the arena.
+
+                                    <h4>Score and HP Score</h4>
+
+                                    It has a championship format, so every player will have to fight every other player.
+                                    Winning a duel (by defeating the enemy or time run out and the player has more hp than the enemy) gives 3 score.
+                                    Losing gives 0.
+                                    If it ends in a tie (if both players die at the same time or tie runs out with both players with same hp and shield), each player gets 1 score.
+                                    Everytime a duel match ends, the score table is printed in console.
+                                    After all matches are done, the player with the highest score wins, and receives a prize.
+                                    If there is more than one player with the same score at the end of tournament, the untie criteria (HP Score) is used. It is the red number
+                                    shown in /dueltable. Every time a player wins a duel, his remaining hp and shield is added to this number, so when players are tied in score,
+                                    the player with highest red number will be ahead.
+
+                                    <h4>Teams</h4>
+
+                                    The Duel Tournament will allow players to add other players as allies, so it is possible to have 1v1, 2v1 and 2v2 matches.
+                                    To add someone, after joining tournament with /duelmode, press Use key (usually R) on the player. He will have to do the same to establish the alliance.
+                                    Matches are balanced by making the players in team have only hp and no shield during 2v1 and 2v2 matches.
+                                </p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line8_3">Sniper Battle </h3>
+                                <center><a href="images/upload/sniperbattle.png" data-rel="prettyPhoto"><img src="images/upload/sniperbattle.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                <p>
+                                    This is a last man standing mode with disruptor rifle. </br>
+                                    After the match starts, all players lose their force powers and weapons, and will have only a jetpack and a disruptor rifle. </br>
+                                    It is not possible to pickup anything on the map during the match. </br>
+                                    The match has a time limit of 10 minutes. </br>
+                                    The last player alive wins a prize.
+                                </p>
+                                <p>The commands to manage it are:</p>
+
+                                <pre class="brush: html">
+                                    /snipermode: Join the game.
+                                </pre>
+                                <pre class="brush: html">
+                                    /snipertable: shows players who joined it and their score.
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line8_4">Melee Battle </h3>
+                                <p>
+                                    A battle with melee in a platform. </br>
+                                    The battle lasts 10 minutes, the last player alive in the platform wins a prize.
+                                </p>
+                                <p>The commands to manage it are:</p>
+
+                                <pre class="brush: html">
+                                    /meleearena: Adds the platform on the map. 
+                                                 Needs /duelarena permissions.
+                                </pre>
+                                <pre class="brush: html">
+                                    /meleemode: Joins the battle.
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line9" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Useful Commands <hr></h2>
+                                <p>Here are some useful commands that will come in handy:</p>
+                                <pre class="brush: html">
+                                    /roll [maxnumber]: Generates a random number between 1 and maxnumber.
+                                </pre>
+                                <pre class="brush: html">
+                                    /news [jedi/sith/republic]: Displays the news regarding the chosen faction (If left blank shows general news).
+                                </pre>
+
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line10" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Version History (Changelog) <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <p>Once again, thank you so much for trying out this mod. It's been born from my own love of roleplaying, and I hope it will be of help the roleplaying community. I've worked on the mod alone, and I am happy to see it grow more and more (almost) each month.</br></br>
+                                Special thanks are in order for Zyk, who developed the mod on which is based off of. It saved me a lot of time and unneccessary effort. And, as anyone with a true love for the community, allowed it to be open source.</br>
+                                The full changelog is displayed below. I really hope you enjoy it, and thanks again for trying it.</p>
+
+                                <hr>
+
+                                <h4>Changelog</h4>
+
+                                <pre class="brush: html">
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 3.0 - Apr 8th, 2021
+                                        -----------------------------------------------------------------------------------------
+
+                                        - Chat system revamped, added chat modifiers for all actions that can be done. The normal chat is unchanged should players prefer to keep using that.
+                                        - Entity saving is now fixed, no longer crashes the server. (whoops)
+                                        - /roll will never display 0 anymore. It was due to a bug in the random number generator. (whoops x2)
+
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 2.0 - Feb 11th, 2021
+                                        -----------------------------------------------------------------------------------------
+                                        - /god now works for everyone in the server, and will be broadcast to let everyone know. This is to allow players with less skill to take part in combat and be able to roleplay properly.
+                                        - /rpmodeup and /rpmodedown are replaced by /skillup and /skilldown
+                                        - /createcredits is now a separate command (but it can still only be used by admins)
+                                        - /creditgive is now replaced by /givecredits
+                                        - /spendcredits was added, which broadcasts a message and takes the money form the players account.
+                                        - .sab variable is now increased, hopefully allowing for more saber models to be added.
+                                        - Weapons will now have to be bought IG, and an admin has to authorize it.
+                                        - Store prices have been balanced, and increased to better allow lower denominations.
+                                        - Unused items have been removed form the shop.
+                                        - Added a /news command, used by players to get IC news updates from the server. This can either be /news, /news republic, /news sith and /news jedi.
+                                        - Credit creation is now only allowed by admins with GiveAdmin permission.
+                                        - Some sounds have been disabled, namely see, distract, distractstop, absorbloop and seeloop. This is for better immersion.
+                                        - Added 16 new animations, be sure to check out /emote list to find them.
+                                        - /list rpg now replaced by /list help
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 1.1.1 - Feb 3rd, 2021
+                                        -----------------------------------------------------------------------------------------
+                                        - No need to BUY the weapon itself, everyone will have all weapons from the start (but no ammo)
+                                        - Ammo is saved and if you run out you'll have to buy more form the seller if you want to use the weapon
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 1.1 - Feb 1st, 2021
+                                        -----------------------------------------------------------------------------------------
+                                        - Ammo files aren't shown as characters anymore
+                                        - Sniper battle minigame now works
+                                        - Melee battle minigame now works
+                                        - Added some validation to the name of characters (special characters apart from "_" are not allowed anymore)
+                                        - Dueling now works just like in ja+
+                                        - Duel tournament now works
+                                        - Last Man Standing now works
+                                        - "Magic Potion" doesn't show up anymore at the item seller (Duh!)
+                                        - Added dice roll command (/roll [max_roll])
+                                        - Map loading screen is now less cluttered, leaving more room for the artwork.
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 1.0 - Jan 17th, 2021
+                                        -----------------------------------------------------------------------------------------
+                                        - Account system
+                                        - Ammo and skills are saved per character
+                                        - Fully working shop
+                                        - Credit system (Admins can now create credits)
+                                        - OOC chat
+                                        - NoClip now works as intended
+                                        - Custom UI
+                                        - Custom HUD
+                                        - Fully working emote system words AND IDs (Do /emote list to see everything)
+                                        - Desann and Tavion are unlocked
+                                        - New Upgrades for Mercs as well as more force powers for Force sensitive chars
+                                        - Added scripts for setting resolution
+                                        - Admin permissions work as intended
+                                        - Voice chat works as intended (Not mic but pre recorded commands)
+                                        - Weapons upgrades work as intended
+                                        - Podracing now works
+                                        - Ally system now works
+                                        - Entity system now works
+                                        - Shader remapping through ig commands now works
+                                        - Skills that can be added or removed by admins only
+                                        - Broadcasting of a player's login/logout message to let people know what they logged in as.
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 0.5 BETA - Oct 21st, 2020
+                                        -----------------------------------------------------------------------------------------
+                                        - Advanced admin system
+                                        - Advanced credit system
+                                        - More abilities can be unlocked compared to in the base game
+                                        - New Art
+                                        - Improved UI
+
+
+                                      </pre>
+
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line11" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Copyright and license <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                
+                                <p>Code released under the <a href="https://github.com/alexnita3/GalaxyRP/blob/develop/LICENSE.txt">License.</a></p>                        
+                                <p>For more information about copyright and license check <a href="https://github.com/alexnita3/GalaxyRP/blob/develop/LICENSE.txt" target="_blank">GPL v2.0</a>.</p>
+                            
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+                </div>
+                <!-- // end .col -->
+
+            </div>
+            <!-- // end .row -->
+
+        </div>
+        <!-- // end container -->
+
+    </div>
+    <!-- end wrapper -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+
+    <!-- CUSTOM PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/syntax-highlighter/scripts/shCore.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+
+</body>
+
+</html>
