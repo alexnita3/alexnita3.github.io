@@ -123,6 +123,9 @@
                             </li>
                             <li><a href="#line4">Account System</a></li>
                             <li><a href="#line5">Admin System</a></li>
+                                <ul class="nav">
+                                    <li><a href="#line5_1">Admin Permissions</a></li>
+                                </ul>
                             <li><a href="#line6">RP Basics</a>
                                 <ul class="nav">
                                     <li><a href="#line6_1">Credit System</a></li>
@@ -140,6 +143,12 @@
                                     <li><a href="#line12_5">Force Actions</a></li>
                                     <li><a href="#line12_6">Shouting</a></li>
                                     <li><a href="#line12_7">Lowering your voice</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line13">News System</a>
+                                <ul class="nav">
+                                    <li><a href="#line13_1">Reading the news</a></li>
+                                    <li><a href="#line13_2">Updating the news</a></li>
                                 </ul>
                             </li>
                             <li><a href="#line7">Entity System</a>
@@ -173,7 +182,7 @@
                                         <div class="intro1">
                                             <ul>
                                                 <li><strong>Mod : </strong>GalaxyRP</li>
-                                                <li><strong>Item Version : </strong> v 3.0</li>
+                                                <li><strong>Item Version : </strong> v 3.1</li>
                                                 <li><strong>Author  : </strong> <a href="https://github.com/alexnita3" target="_blank">Alex</a></li>
                                                 <li><strong>License : </strong> <a href="https://github.com/alexnita3/GalaxyRP/blob/develop/LICENSE.txt" target="_blank">GPL v2.0</a></li>
                                             </ul>
@@ -568,6 +577,35 @@
                             /silence: makes a player unable to chat
                         </pre>
 
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line5_1">Admin permissions </h3>
+                                <p>
+                                    This is the list of different admin permissions and what they do.
+                                </p>
+
+                                <pre class="brush: html">
+                                    0 - NPC : Allows the spawning of NPCs on the server.
+                                    1 - NoClip : Allows the use of /noclip, making the user able to go through walls.
+                                    2 - GiveAdmin : Allows the granting and revoking of admin permissions. (DO NOT GIVE THIS AWAY LIGHTLY)
+                                    3 - Telepot : Allows the use of /teleport command.
+                                    4 - Admin Protect : Makes the user impervious to teleportation when enabled. Also, when enabled, the user can see all the chat on the server, regardless of distance.
+                                    5 - EntitySystem : Allows the use of /ent commands.
+                                    6 - Silence : Allows silencing of players.
+                                    7 - ClientPrint : User can use the client print commands.
+                                    8 - RP Mode : !!!UNUSED!!!
+                                    9 - Kick : User can kick players.
+                                    10 - Paralyze : User can paralyze other players.
+                                    11 - Give : User can /give. Also allows the user to use /createcredits.
+                                    12 - Scale : User can scale other people. (Anyone can /scale themselves)
+                                    13 - Players : User can use /players to get player IDs and can also see other people's abilities.
+                                    14 - DuelArena : User can define the arena for the duel arena game.
+                                    15 - Custom Quest : !!!UNUSED!!!
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+
                     </section>
                     <!-- end section -->
 
@@ -913,11 +951,79 @@
                                     Lowering your voice is where your character speaks in hushed tones, and can only be seen by people very close by. This is done via a chat (Y) modifier. It will display your message in a slightly different format.
                                 </p>
                                 <pre class="brush: html">
-                                    /low [your message]: CHAT MODIFIER that displays a shout taken by your character.
+                                    /low [your message]: CHAT MODIFIER that displays the hushed tone taken by your character.
                                 </pre>
                                 <p>
                                     There are no further modifiers that apply to this option.
                                 </p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line12_7">Broadcasting </h3>
+                                <p>
+                                    Broadcast text to the whole server, with no regard for distance.
+                                </p>
+                                <pre class="brush: html">
+                                    /all [your message]: CHAT MODIFIER that displays a broadcast taken by your character.
+                                </pre>
+                                <p>
+                                    There are no further modifiers that apply to this option.
+                                </p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line13" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">News System <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <p>
+                                    GalaxyRP contains an in-game news system. While it isn't mandatory to use it, if you want to, read this section to find out how to use the system.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line13_1">Reading the news</h3>
+                                <p>
+                                    There are four different news channels that can be read by players in-game. Apart from the generic one, which requires no modifier, the other three will require that the channel be specified. The three options are: <b>jedi</b>, <b>sith</b> and <b>republic</b>. These will display a message to all the players that run the command, which will be set by admins. (read the following section). The command to read the news is as follows:
+                                </p>
+                                <pre class="brush: html">
+                                    /news [jedi/sith/republic](optional): Shows the news from the specified channel (or generic news if not specified).
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line13_2">Updating the news</h3>
+                                <p>
+                                    Updating the news will require the <b>GiveAdmin</b> admin permission. Each news channel can be updated independently, using the following command:
+                                </p>
+                                <pre class="brush: html">
+                                    /updatenews [jedi/sith/republic](optional): Updates the news in a channel (or generic news if not specified).
+                                </pre>
                             </div>
                             <!-- end col -->
                         </div>
@@ -2280,6 +2386,15 @@
                                 <h4>Changelog</h4>
 
                                 <pre class="brush: html">
+                                        -----------------------------------------------------------------------------------------
+                                        Version 3.1 - Aug 8th, 2021
+                                        -----------------------------------------------------------------------------------------
+
+                                        - /all is now fixed, and broadcasts to the whole server.
+                                        - Added a news system in-game, where news can be read and written ICly.
+                                        - AdminProtect will now allow admins to see all chat on the server, to allow them to monitor players.
+                                        - Minor bugfix with /all where the message wouldn't be displayed correctly on the screen (missing the colon)
+
 
                                         -----------------------------------------------------------------------------------------
                                         Version 3.0 - Apr 8th, 2021
