@@ -143,6 +143,7 @@
                                     <li><a href="#line12_5">Force Actions</a></li>
                                     <li><a href="#line12_6">Shouting</a></li>
                                     <li><a href="#line12_7">Lowering your voice</a></li>
+                                    <li><a href="#line12_8">More descriptions</a></li>
                                 </ul>
                             </li>
                             <li><a href="#line13">News System</a>
@@ -156,6 +157,21 @@
                                     <li><a href="#line7_1">List of Entities</a></li>
                                     <li><a href="#line7_2">Remapping Shaders</a></li>
                                 </ul>
+                            </li>
+                            <li><a href="#line14">Inventory System</a>
+                                <ul class="nav">
+                                    <li><a href="#line14_1">Checking your inventory</a></li>
+                                    <li><a href="#line14_2">Creating an item</a></li>
+                                    <li><a href="#line14_3">Deleting an item</a></li>
+                                    <li><a href="#line14_4">Transferring an item</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line15">Character Description System</a>
+                                <ul class="nav">
+                                    <li><a href="#line15_1">Setting your description</a></li>
+                                    <li><a href="#line15_2">Checking someone's description</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#line8">Games</a>
                                 <ul class="nav">
                                     <li><a href="#line8_1">Racing Mode</a></li>
@@ -182,7 +198,7 @@
                                         <div class="intro1">
                                             <ul>
                                                 <li><strong>Mod : </strong>GalaxyRP</li>
-                                                <li><strong>Item Version : </strong> v 3.1</li>
+                                                <li><strong>Item Version : </strong> v 3.2</li>
                                                 <li><strong>Author  : </strong> <a href="https://github.com/alexnita3" target="_blank">Alex</a></li>
                                                 <li><strong>License : </strong> <a href="https://github.com/alexnita3/GalaxyRP/blob/develop/LICENSE.txt" target="_blank">GPL v2.0</a></li>
                                             </ul>
@@ -236,18 +252,19 @@
                                 <p>
                                     
                                     <h2>General Mod Features</h2>
-                                    
-                                    The mod allows server owners to change weapon shot speeds, damages, max ammo, max force power.
-                                    Players can also kickflip enemies by jumping and pressing Jump key right before hitting the enemy.
-                                    Blaster pistol does not have infinite ammo.
-                                    Cloak Item does not have fuel, it is infinite, bu it can be disabled by enemies who use etectric attacks against the cloaked player.
-                                    Jetpack fuel is not infinite, but lasts a lot longer.
-                                    Force Field holdable item has more hp.
-                                    Jetpack does not have limit to fly up, so you can really fly to the sky with it.</br>
                                 
                                     The mod contains these following main features:
                                     <ol>
                                         <li>An account system</li>
+                                        <li>Custom Force powers</li>
+                                        <li>Complete rebalance between gunslingers and Force users</li>
+                                        <li>An item shop</li>
+                                        <li>A completely revamped chat system, which makes writing much easier, and declutters the server</li>
+                                        <li>Different distances at which chat can be seen, depending on 22 chat modifiers</li>
+                                        <li>A news system that admins can use to let people know of major happenings in the galaxy</li>
+                                        <li>An inventory system for custom items</li>
+                                        <li>A description system that allows players to see your description</li>
+                                        <li>A dice system</li>
                                         <li>A level system, and skill points system</li>
                                         <li>An admin system with admin commands. These can be given one by one to each account</li>
                                         <li>Acount settings, which the player can configure to turn on or off some features</li>
@@ -593,14 +610,20 @@
                                     5 - EntitySystem : Allows the use of /ent commands.
                                     6 - Silence : Allows silencing of players.
                                     7 - ClientPrint : User can use the client print commands.
-                                    8 - RP Mode : !!!UNUSED!!!
+                                    8 - Placeholder : !!!UNUSED!!!
                                     9 - Kick : User can kick players.
                                     10 - Paralyze : User can paralyze other players.
                                     11 - Give : User can /give. Also allows the user to use /createcredits.
                                     12 - Scale : User can scale other people. (Anyone can /scale themselves)
                                     13 - Players : User can use /players to get player IDs and can also see other people's abilities.
                                     14 - DuelArena : User can define the arena for the duel arena game.
-                                    15 - Custom Quest : !!!UNUSED!!!
+                                    15 - Placeholder : !!!UNUSED!!!
+                                    15 - Create Items : Allows the use of /createitem.
+                                    15 - God Mode : Allows the use of /god.
+                                    15 - Upgrade Level : Allows the use of /levelup.
+                                    15 - Change Skills : Allows the use of /skillup and /skilldown.
+                                    15 - Create Credits : Allows the use of /createcredits.
+                                    15 - Ignore Chat distance : Shows all chat on the server, ignoring distance.
                                 </pre>
                             </div>
                             <!-- end col -->
@@ -973,6 +996,32 @@
                                 <p>
                                     There are no further modifiers that apply to this option.
                                 </p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line12_8">More Descriptions </h3>
+                                <p>
+                                    Describe a part of your body.
+                                </p>
+                                <pre class="brush: html">
+                                    /my [your message]: CHAT MODIFIER that describes a part of your character's body.
+                                </pre>
+                                <p>
+                                    There are three further modifiers that can be added to this one. All they do is increase or decrease the range at which they're displayed.
+                                </p>
+                                <pre class="brush: html">
+                                    /mylong [your message]: CHAT MODIFIER that describes a part of your character's body. (Longer Range)
+                                </pre>
+                                <pre class="brush: html">
+                                    /mylow [your message]: CHAT MODIFIER that describes a part of your character's body. (Shorter Range)
+                                </pre>
+                                <pre class="brush: html">
+                                    /myall [your message]: CHAT MODIFIER that describes a part of your character's body. (Broadcasts it to the whole server)
+                                </pre>
                             </div>
                             <!-- end col -->
                         </div>
@@ -2207,6 +2256,137 @@
                     </section>
                     <!-- end section -->
 
+                    <section id="line14" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Inventory System <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <p>
+                                    GalaxyRP contains an in-game inventory system, this can be used to check your credits, items that your character carries, create any item that serves your RP, and transfer items between characters, as well as delete them.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line14_1">Checking your inventory</h3>
+                                <p>
+                                    This will allow you to see your character's inventory. The command to check your inventory is as follows:
+                                </p>
+                                <pre class="brush: html">
+                                    /inv: Shows your inventory.
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line14_2">Creating an item</h3>
+                                <p>
+                                    This will allow you to create an item, which will be added to your inventory. This requires the Create Item admin command to be set to yes. The command to create an item is as follows:
+                                </p>
+                                <pre class="brush: html">
+                                    /createitem [itemname]: Create an item. Item containing more than one work well need " " around the argument.
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line14_3">Deleting an item</h3>
+                                <p>
+                                    This will allow you to delete an item, which will be removed from your inventory. The command to create an item is as follows:
+                                </p>
+                                <pre class="brush: html">
+                                    /trashitem [itemId]: Deletes an item.
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line14_4">Transferring an item</h3>
+                                <p>
+                                    This will allow you to give another player an item, which will be removed from your inventory and added to theirs. The command to transfer an item is as follows:
+                                </p>
+                                <pre class="brush: html">
+                                    /giveitem [itemId] [playerName]: Transfers an item to the desired player.
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line15" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Character Description System <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <p>
+                                    GalaxyRP contains an in-game description system, that allows characters to give themselves a written description, which can be viewed by nearby players.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line15_1">Setting your description</h3>
+                                <p>
+                                    This will allow you to set your character's description. The command to do that is as follows:
+                                </p>
+                                <pre class="brush: html">
+                                    /attributes [descriptiontext]: Sets your character's attributes. Place text in double quotes.
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line15_2">Checking someone's description</h3>
+                                <p>
+                                    This will allow you to see a character's description. The command to do that is as follows:
+                                </p>
+                                <pre class="brush: html">
+                                    /examine [playerName]: Shows you the desired player's description. (works on yourself as well)
+                                    /ex [playerName]: Shows you the desired player's description. (works on yourself as well)
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
                     <section id="line8" class="section">
 
                         <div class="row">
@@ -2355,6 +2535,9 @@
                                 <pre class="brush: html">
                                     /news [jedi/sith/republic]: Displays the news regarding the chosen faction (If left blank shows general news).
                                 </pre>
+                                <pre class="brush: html">
+                                    /flipcoin: Flips a coin.
+                                </pre>
 
                             </div>
                             <!-- end col -->
@@ -2386,6 +2569,19 @@
                                 <h4>Changelog</h4>
 
                                 <pre class="brush: html">
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 3.2 - Aug 11th, 2021
+                                        -----------------------------------------------------------------------------------------
+
+                                        - Added /mylow, /myall, /mylong, /my chat modifiers.
+                                        - Added a brand new inventory system, with custom items that can be created (/createitem), deleted (/trashitem), and passed around between players (/giveitem).
+                                        - Added a brand new description system for characters. Players can now set their own character descriptions (/attributes), which can be seen by other players (/examine).
+                                        - Added six more admin permissions that allow the use of their respective commands. (fully backwards compatible)
+                                        - Added /flipcoin command.
+                                        - Fixed a chat bug where text in the middle of the string would be interpreted as a command. (e.g. "I know /all/ the cool places." would be interpreted as /all. Not anymore!)
+                                        - Fixed dueling always starting people at 100 hp 100 shield.
+
                                         -----------------------------------------------------------------------------------------
                                         Version 3.1 - Aug 8th, 2021
                                         -----------------------------------------------------------------------------------------
