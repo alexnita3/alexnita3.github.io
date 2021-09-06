@@ -57,11 +57,21 @@
             window.scrollTo({ top: 0, behavior: 'smooth' })
             document.documentElement.scrollTo({ top: 0, behavior: 'smooth' })
         }
+		function readCookie(name) {
+			return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + name.replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+		}
 
         document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('#mode').addEventListener('click',()=>{
                 document.querySelector('html').classList.toggle('dark');
-            })
+				document.cookie = readCookie('galaxyrp_mode') != "dark" ? "galaxyrp_mode=dark" : "galaxyrp_mode=light";
+            });
+			
+			if (readCookie('galaxyrp_mode') == "dark") {
+				document.querySelector('html').classList.add('dark');
+			} else {
+				document.querySelector('html').classList.remove('dark');
+			}
         });
 
 
