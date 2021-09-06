@@ -57,11 +57,21 @@
             window.scrollTo({ top: 0, behavior: 'smooth' })
             document.documentElement.scrollTo({ top: 0, behavior: 'smooth' })
         }
+		function readCookie(name) {
+			return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + name.replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+		}
 
         document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('#mode').addEventListener('click',()=>{
                 document.querySelector('html').classList.toggle('dark');
-            })
+				document.cookie = readCookie('galaxyrp_mode') != "dark" ? "galaxyrp_mode=dark" : "galaxyrp_mode=light";
+            });
+			
+			if (readCookie('galaxyrp_mode') == "dark") {
+				document.querySelector('html').classList.add('dark');
+			} else {
+				document.querySelector('html').classList.remove('dark');
+			}
         });
 
 
@@ -303,15 +313,15 @@
 
                         <div class="intro2 clearfix">
                             <p>
-                                Community leaders will have to install the Server Side Mod on their server, while players will need to install the clientside only.</br>
-                                !!!The mod works without players installing the client-side mod, but some features may not work properly!!!</br>
+                                Community leaders will have to install the Server Side Mod on their server, while players will need to install the clientside only.<br>
+                                !!!The mod works without players installing the client-side mod, but some features may not work properly!!!<br>
                                 !!!Be aware that the mod is only tested on WINDOWS-based hosts. While it likely works on linux-based hosts as well, I do not guaratee it, and you will have to compile the linux files yourself.!!!
                             </p>
                         </div>
 
                         <p>
-                            This section will look at installing the mod, as well as go through some settings that I advise server owners to do.</br>
-                            I will be using a host called Bluefang for this guide, so you must adapt the settings and commands to your own host should it be any different. </br>
+                            This section will look at installing the mod, as well as go through some settings that I advise server owners to do.<br>
+                            I will be using a host called Bluefang for this guide, so you must adapt the settings and commands to your own host should it be any different. <br>
                         </p>
 
                         <hr>
@@ -331,7 +341,7 @@
                         <center><a href="images/upload/image2.PNG" data-rel="prettyPhoto"><img src="images/upload/image2.PNG" alt="" class="img-responsive img-thumbnail"></a></center>
 
                         <p>
-                            After the installation, go into your server control panel, and expand the "Command Line Editor" section, where you will find a few options that need changing.</br>
+                            After the installation, go into your server control panel, and expand the "Command Line Editor" section, where you will find a few options that need changing.<br>
                             The first will be the 'Templates' section. Click on the dropdown list, and select the option called Active Command Line Parameters.
                             The second will be the 'Parameters' section. This is slightly trickier to modify. You will need to write down the IP address for the server, as well as the port. After you have those, you will need to paste the following command in the textbox, making sure to replace the ip address and port with your own:
                         </p>
@@ -382,8 +392,8 @@
                                     <h3 id="line3_1">1. Getting to the console </h3>
                                     <center><a href="images/upload/console.png" data-rel="prettyPhoto"><img src="images/upload/console.png" alt="" class="img-responsive img-thumbnail"></a></center>
                                     <p>
-                                        All the commands are inputted via the game's console. To get to it, press "`" (The key above TAB). If that doesn't work, try pressing SHIFT + ` .</br>
-                                        This is where you'll write all your commands. To do that, start typing and press enter to activate the command.</br>
+                                        All the commands are inputted via the game's console. To get to it, press "`" (The key above TAB). If that doesn't work, try pressing SHIFT + ` .<br>
+                                        This is where you'll write all your commands. To do that, start typing and press enter to activate the command.<br>
                                         If you need to get rid of the console, press the same button you used to access it.
                                     </p>
                                 </div>
@@ -395,8 +405,8 @@
                                     <h3 id="line3_2">2. Creating an account </h3>
                                     <center><a href="images/upload/createaccount.png" data-rel="prettyPhoto"><img src="images/upload/createaccount.png" alt="" class="img-responsive img-thumbnail"></a></center>
                                     <p>
-                                        To start playing, you will need an account. This is where all your characters and admin permissions will be stored.</br>
-                                        !!!Remember, acounts are a different thing to characters, we will get to that in the next section.!!!</br>
+                                        To start playing, you will need an account. This is where all your characters and admin permissions will be stored.<br>
+                                        !!!Remember, acounts are a different thing to characters, we will get to that in the next section.!!!<br>
                                         To create an account run the following command (Replace everything in "[" "]" with your own values, so "/new [user] [pass]" will mean that you have to enter for example "/new alex supersecretpassword").
                                     </p>
 
@@ -413,8 +423,8 @@
                                     <h3 id="line3_3">3. Creating a character </h3>
                                     <center><a href="images/upload/createchar.png" data-rel="prettyPhoto"><img src="images/upload/createchar.png" alt="" class="img-responsive img-thumbnail"></a></center>
                                     <p>
-                                        If the account is what stores your character, your character is where all your skills, credits and items are stored. </br>
-                                        An account can have multiple characters, all at completely different levels and skills.</br>
+                                        If the account is what stores your character, your character is where all your skills, credits and items are stored. <br>
+                                        An account can have multiple characters, all at completely different levels and skills.<br>
                                         To create your character, use:
                                     </p>
 
@@ -459,17 +469,17 @@
                                     <h3 id="line3_5">4. Start roleplaying! </h3>
                                     <center><a href="images/upload/roleplay.png" data-rel="prettyPhoto"><img src="images/upload/roleplay.png" alt="" class="img-responsive img-thumbnail"></a></center>
                                     <p>
-                                        To roleplay, use the "Y" key to start typing, and press enter when you're done.</br>
+                                        To roleplay, use the "Y" key to start typing, and press enter when you're done.<br>
                                         !!!Remember, this chat has a limit on how far it can be "heard" from, so if your friends are too far away, they might not see what you typed!!!
                                     </p>
 
                                     <p>
-                                        To use the OOC (Out of character) chat, simply press "T" instead of "Y", type, and press enter.</br>
+                                        To use the OOC (Out of character) chat, simply press "T" instead of "Y", type, and press enter.<br>
                                         !!!Remember, the OOC char can be seen server-wide, so everyone will be able to see what you typed!!!
                                     </p>
 
                                     <p>
-                                        Start living your Star Wars story. :) </br>
+                                        Start living your Star Wars story. :) <br>
                                         I hope this quickguide was enough to get you started, feel free to look into other things you can do in the game, by scrolling down.
                                         !!!Remember, roleplaying is about fun, don't get too caught up in the mechanics and start playing! In time you will learn the ins and outs of the mod!!!
                                     </p>
@@ -495,9 +505,9 @@
                         <p>
                             The account system allows a player to create an account in the server. It contains his admin commands, his settings,
                             and all roleplaying stuff.
-                            </br>
+                            <br>
                             When creating an account, a character will be created by default with the same name as the account. The player can create further characters that are associated with the same account, without having to create multiple accounts.
-                            </br>
+                            <br>
                             Below a list of account system commands.
                             The main account system commands are:
                         </p>
@@ -558,9 +568,9 @@
                         </div>
                         <!-- end row -->
 
-                        <p>The mod has some admin commands.</br>
-                        Each player account can have a specific set of admin commands.</br>
-                        More info about the admin commands can be found ingame.</br>
+                        <p>The mod has some admin commands.<br>
+                        Each player account can have a specific set of admin commands.<br>
+                        More info about the admin commands can be found ingame.<br>
                         Below the console commands to manage the admin commands:</p>
 
                         <pre class="brush: html">
@@ -651,7 +661,7 @@
                                     
                                     When an admin determines the time is right, the player gets a new level. Each level increases 2 HP + 2 shield + 3 FP.
                                     
-                                    </br>
+                                    <br>
                                     
                                     There are 56 skills available in Galaxy RP. They include force powers, weapons, ammo, items and some miscellaneous stuff.
                                     They are divided in 5 categories in the command /list:
@@ -740,8 +750,8 @@
                             <div class="col-md-12">
                                 <h3 id="line6_2">Ally System </h3>
                                 <p>
-                                    The player can have allies, players which will not receive damage from him, this is particularly useful in group fights.</br> 
-                                    Allies also have a dedicated chat, separate to the team and general chats.</br>
+                                    The player can have allies, players which will not receive damage from him, this is particularly useful in group fights.<br> 
+                                    Allies also have a dedicated chat, separate to the team and general chats.<br>
                                     There are 3 commands to manage allies:
                                 </p>
                                 <pre class="brush: html">
@@ -766,8 +776,8 @@
                                 <h3 id="line6_3">Emotes </h3>
                                 <center><a href="images/upload/emotesystem.png" data-rel="prettyPhoto"><img src="images/upload/emotesystem.png" alt="" class="img-responsive img-thumbnail"></a></center>
                                 <p>
-                                    Emotes are allowed by a server cvar. They can be used by players to animate their character in specific poses.</br>
-                                    There are two types of emotes supported by the mod: worded and generic. </br>
+                                    Emotes are allowed by a server cvar. They can be used by players to animate their character in specific poses.<br>
+                                    There are two types of emotes supported by the mod: worded and generic. <br>
                                     Worded emotes are easier to remember and are more common, they are defined by a word, instead of a number, while generic emotes are defined by an ID, between 0 and 1542. 
                                 </p>
 
@@ -834,7 +844,7 @@
                                     </p>
 
                                     <p>
-                                        To access it, press the default key (T) and a ui element will pop out where you can type. You will notice that after pressing enter, your messages will display in red, and wil have "((" "))" around the actual message.</br>
+                                        To access it, press the default key (T) and a ui element will pop out where you can type. You will notice that after pressing enter, your messages will display in red, and wil have "((" "))" around the actual message.<br>
                                         This chat will also be broadcast across the server regardless of distance.
                                     </p>
                             </div>
@@ -848,9 +858,9 @@
                                 <h3 id="line12_2">Say chat </h3>
                                 <center><a href="images/upload/say.png" data-rel="prettyPhoto"><img src="images/upload/say.png" alt="" class="img-responsive img-thumbnail"></a></center>
                                 <p>
-                                    This is where the magic goes. The say chat is where you'll talk through your character. To acces it, press the default key (Y) and type your message.</br>
-                                    !!!BEWARE this chat has a limit on distance, so some of your friends might not hear you if ythey're sittiing too far away.!!!</br>
-                                    This can be changed by typing in /long [your message] IN THE CHAT WINDOW (Y), as opposed to the console. This will make your messages be displayed to players further away from you.</br>
+                                    This is where the magic goes. The say chat is where you'll talk through your character. To acces it, press the default key (Y) and type your message.<br>
+                                    !!!BEWARE this chat has a limit on distance, so some of your friends might not hear you if ythey're sittiing too far away.!!!<br>
+                                    This can be changed by typing in /long [your message] IN THE CHAT WINDOW (Y), as opposed to the console. This will make your messages be displayed to players further away from you.<br>
                                     Read the next sections to learn about other chat modifiers.
                                 </p>
                                 <pre class="brush: html">
@@ -1097,9 +1107,9 @@
 
                                 <center><a href="images/upload/entitysystem.png" data-rel="prettyPhoto"><img src="images/upload/entitysystem.png" alt="" class="img-responsive img-thumbnail"></a></center>
 
-                                <p>The mod allows players with the admin flag Entity System set in their accounts to manipulate entities in the map, without having to download the tools, or have mapping knowledge.</br>
+                                <p>The mod allows players with the admin flag Entity System set in their accounts to manipulate entities in the map, without having to download the tools, or have mapping knowledge.<br>
                                 Commonly, this can be used to add different lightling, change the skybox to have a night/day cycle.
-                                </br>
+                                <br>
                                     The relevant commands are:
                                 </p>
 
@@ -2222,7 +2232,7 @@
                             <div class="col-md-12">
                                 <h3 id="line7_2">Remapping shaders </h3>
                                 <p>
-                                    It is possible to remap the shaders of anything (weapons, items, skybox, etc) with some commands </br>
+                                    It is possible to remap the shaders of anything (weapons, items, skybox, etc) with some commands <br>
                                     Here is an example to remap the shaders of the heavy repeater weapon at origin 0 0 0:
                                 </p>
                                 <pre class="brush: html">
@@ -2401,7 +2411,7 @@
 
                             <div class="col-md-12">
                                 <p>GalaxyRP supports a variety of gamemodes, which can be activated by all players.
-                                </br>
+                                <br>
                                     The relevant commands are:
                                 </p>
                             </div>
@@ -2411,11 +2421,11 @@
                                     <h3 id="line8_1">Racing Mode </h3>
                                     <center><a href="images/upload/racemode.png" data-rel="prettyPhoto"><img src="images/upload/racemode.png" alt="" class="img-responsive img-thumbnail"></a></center>
                                     <p>
-                                        The mod has a racing mode, which allows players to race with swoop bikes in the Single Player t2_trip map, or to race with tauntauns in the Single Player t3_stamp map. </br>
-                                        To enter the race, use the console command /racemode. </br>
-                                        The race starts some seconds after the last player who used the command.</br>
-                                        There is a cvar in server.cfg to set the time in miliseconds for the race to start.</br>
-                                        If a player tries to start before the countdown or he leaves his vehicle during the race, he loses.</br>
+                                        The mod has a racing mode, which allows players to race with swoop bikes in the Single Player t2_trip map, or to race with tauntauns in the Single Player t3_stamp map. <br>
+                                        To enter the race, use the console command /racemode. <br>
+                                        The race starts some seconds after the last player who used the command.<br>
+                                        There is a cvar in server.cfg to set the time in miliseconds for the race to start.<br>
+                                        If a player tries to start before the countdown or he leaves his vehicle during the race, he loses.<br>
                                         Whoever finishes in first place receives a prize.
                                     </p>
                                 </div>
@@ -2429,7 +2439,7 @@
                                 <h3 id="line8_2">Duel Tournament </h3>
                                 <center><a href="images/upload/dueltournament.png" data-rel="prettyPhoto"><img src="images/upload/dueltournament.png" alt="" class="img-responsive img-thumbnail"></a></center>
                                 <p>
-                                    This is a tournament of private duels. It can have up to 32 players in it. </br>
+                                    This is a tournament of private duels. It can have up to 32 players in it. <br>
                                     These are the commands to manage it:
                                 </p>
 
@@ -2482,10 +2492,10 @@
                                 <h3 id="line8_3">Sniper Battle </h3>
                                 <center><a href="images/upload/sniperbattle.png" data-rel="prettyPhoto"><img src="images/upload/sniperbattle.png" alt="" class="img-responsive img-thumbnail"></a></center>
                                 <p>
-                                    This is a last man standing mode with disruptor rifle. </br>
-                                    After the match starts, all players lose their force powers and weapons, and will have only a jetpack and a disruptor rifle. </br>
-                                    It is not possible to pickup anything on the map during the match. </br>
-                                    The match has a time limit of 10 minutes. </br>
+                                    This is a last man standing mode with disruptor rifle. <br>
+                                    After the match starts, all players lose their force powers and weapons, and will have only a jetpack and a disruptor rifle. <br>
+                                    It is not possible to pickup anything on the map during the match. <br>
+                                    The match has a time limit of 10 minutes. <br>
                                     The last player alive wins a prize.
                                 </p>
                                 <p>The commands to manage it are:</p>
@@ -2504,7 +2514,7 @@
                             <div class="col-md-12">
                                 <h3 id="line8_4">Melee Battle </h3>
                                 <p>
-                                    A battle with melee in a platform. </br>
+                                    A battle with melee in a platform. <br>
                                     The battle lasts 10 minutes, the last player alive in the platform wins a prize.
                                 </p>
                                 <p>The commands to manage it are:</p>
@@ -2560,8 +2570,8 @@
                         <div class="row">
                             <div class="col-md-12">
 
-                                <p>Once again, thank you so much for trying out this mod. It's been born from my own love of roleplaying, and I hope it will be of help the roleplaying community. I've worked on the mod alone, and I am happy to see it grow more and more (almost) each month.</br></br>
-                                Special thanks are in order for Zyk, who developed the mod on which is based off of. It saved me a lot of time and unneccessary effort. And, as anyone with a true love for the community, allowed it to be open source.</br>
+                                <p>Once again, thank you so much for trying out this mod. It's been born from my own love of roleplaying, and I hope it will be of help the roleplaying community. I've worked on the mod alone, and I am happy to see it grow more and more (almost) each month.<br><br>
+                                Special thanks are in order for Zyk, who developed the mod on which is based off of. It saved me a lot of time and unneccessary effort. And, as anyone with a true love for the community, allowed it to be open source.<br>
                                 The full changelog is displayed below. I really hope you enjoy it, and thanks again for trying it.</p>
 
                                 <hr>
