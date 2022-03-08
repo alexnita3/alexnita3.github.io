@@ -317,7 +317,7 @@
                         <div class="intro2 clearfix">
                             <p>
                                 Community leaders will have to install the Server Side Mod on their server, while players will need to install the clientside only.<br>
-                                !!!The mod works without players installing the client-side mod, but some features may not work properly!!!<br>
+                                !!!The mod works without players installing the client-side mod, but some features may not work properly. Admins may not allow people with outdated clients to connect!!!<br>
                                 !!!Be aware that the mod is only tested on WINDOWS-based hosts. While it likely works on linux-based hosts as well, I do not guaratee it, and you will have to compile the linux files yourself.!!!
                             </p>
                         </div>
@@ -350,7 +350,7 @@
                         </p>
 
                         <pre class="brush: html">
-                            +set fs_game GalaxyRP +set dedicated 2 +set net_ip 000.000.00.00 +set net_port 17118 +exec server.cfg
+                            +set fs_game GalaxyRP +set dedicated 2 +set net_ip 000.000.00.00 +set net_port 17118 +exec galaxyrp_server.cfg
                         </pre>
 
                         <p>Make sure you click Update Command Line Parameters afterward. Your setting shoudl now look like this:</p>
@@ -1237,6 +1237,18 @@
                                     </pre>
                                     <pre class="brush: html">
                                         /entdeletefile: deletes an entity file created by entsave command
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /removepickups: removes all pickups from the current map. (ammos, health, shield, and weapons pickups)
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /removepickups: removes all pickups from the current map. (ammos, health, shield, and weapons pickups)
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /spawnplatform: Spawns a platform at the current location.
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /spawndummy: Spawns a dummy at the current location.
                                     </pre>
                             </div>
 
@@ -2679,9 +2691,11 @@
                                 <pre class="brush: html">
 
                                         -----------------------------------------------------------------------------------------
-                                        Version 3.4 - Aug 21th, 2021
+                                        Version 3.4 - Mar 8th, 2022
                                         -----------------------------------------------------------------------------------------
 
+                                        - Dual and Staff damages will scale with ATK skill.
+                                        - Fast style will now scale damage with increased Atk skill.
                                         - Server will now check whether the clients have the most up to date GalaxyRP version.
                                         - Message of the day is now improved.
                                         - Now all saber styles can use kick instead of throw. (Dependant on the "throwable" argument in the saber files)
@@ -2709,6 +2723,18 @@
                                         - Fixed some skills not displaying properly
                                         - Logging in during spectator mode is DISABLED
                                         - Fixed bug with salute and meditate2 emote
+                                        - Console will no longer display animation errors.
+                                        - Added Armor skill.
+                                        - Moved all item things from seller to skills.
+                                        - Selling things to the seller is now DISABLED.
+                                        - Added /shakescreen.
+                                        - Stormtrooper class npcs will now shoot at lightsaber wielding people.
+                                        - Score display is now replaced with level display in the score tab.
+                                        - added /removepickups to remove all pickups from a map.
+                                        - Added 13 new animations.
+                                        - Added /spawnplatform and /spawndummy to make it easier to spawn common things.
+                                        - Added /telemark to mark a teleport point.
+                                        - Added database modules into mod code (Extra dlls/binaries no longer required)
 
                                         -----------------------------------------------------------------------------------------
                                         Version 3.3 - Aug 21th, 2021
