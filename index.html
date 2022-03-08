@@ -138,10 +138,12 @@
                                 </ul>
                             <li><a href="#line6">RP Basics</a>
                                 <ul class="nav">
-                                    <li><a href="#line6_1">Credit System</a></li>
-                                    <li><a href="#line6_2">Ally System</a></li>
-                                    <li><a href="#line6_3">Emotes</a></li>
-                                    <li><a href="#line6_4">NPC Ordering System</a></li>
+                                    <li><a href="#line6_1">Levelling System</a></li>
+                                    <li><a href="#line6_2">Credit System</a></li>
+                                    <li><a href="#line6_3">Ally System</a></li>
+                                    <li><a href="#line6_4">Emotes</a></li>
+                                    <li><a href="#line6_5">NPC Ordering System</a></li>
+                                    <li><a href="#line6_6">Sound System</a></li>
                                 </ul>
                             </li>
                             <li><a href="#line12">Chat Basics</a>
@@ -154,6 +156,7 @@
                                     <li><a href="#line12_6">Shouting</a></li>
                                     <li><a href="#line12_7">Lowering your voice</a></li>
                                     <li><a href="#line12_8">More descriptions</a></li>
+                                    <li><a href="#line12_9">Other Modifiers</a></li>
                                 </ul>
                             </li>
                             <li><a href="#line13">News System</a>
@@ -208,7 +211,7 @@
                                         <div class="intro1">
                                             <ul>
                                                 <li><strong>Mod : </strong>GalaxyRP</li>
-                                                <li><strong>Item Version : </strong> v 3.3</li>
+                                                <li><strong>Item Version : </strong> v 3.4</li>
                                                 <li><strong>Author  : </strong> <a href="https://github.com/alexnita3" target="_blank">Alex</a></li>
                                                 <li><strong>License : </strong> <a href="https://github.com/alexnita3/GalaxyRP/blob/develop/LICENSE.txt" target="_blank">GPL v2.0</a></li>
                                             </ul>
@@ -314,7 +317,7 @@
                         <div class="intro2 clearfix">
                             <p>
                                 Community leaders will have to install the Server Side Mod on their server, while players will need to install the clientside only.<br>
-                                !!!The mod works without players installing the client-side mod, but some features may not work properly!!!<br>
+                                !!!The mod works without players installing the client-side mod, but some features may not work properly. Admins may not allow people with outdated clients to connect!!!<br>
                                 !!!Be aware that the mod is only tested on WINDOWS-based hosts. While it likely works on linux-based hosts as well, I do not guaratee it, and you will have to compile the linux files yourself.!!!
                             </p>
                         </div>
@@ -347,7 +350,7 @@
                         </p>
 
                         <pre class="brush: html">
-                            +set fs_game GalaxyRP +set dedicated 2 +set net_ip 000.000.00.00 +set net_port 17118 +exec server.cfg
+                            +set fs_game GalaxyRP +set dedicated 2 +set net_ip 000.000.00.00 +set net_port 17118 +exec galaxyrp_server.cfg
                         </pre>
 
                         <p>Make sure you click Update Command Line Parameters afterward. Your setting shoudl now look like this:</p>
@@ -604,6 +607,10 @@
                             /silence: makes a player unable to chat
                         </pre>
 
+                        <pre class="brush: html">
+                            /shakeScreen [distance from player] [intensity] [length]: Shakes players' screen in a sphere around the person who initiated the command.
+                        </pre>
+
                         <div class="row">
                             <div class="col-md-12">
                                 <h3 id="line5_1">Admin permissions </h3>
@@ -695,60 +702,93 @@
                                         /skilldown [skill number]: downgrades a skill. The player recovers 1 skill point
                                     </pre>
                             </div>
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h3 id="line6_1">Credit System </h3>
-                                    <center><a href="images/upload/creditsystem.png" data-rel="prettyPhoto"><img src="images/upload/creditsystem.png" alt="" class="img-responsive img-thumbnail"></a></center>
-                                    <p>
-                                        With credits, the player can buy and sell stuff. To do that, he must call the jawa seller.
-                                        By pressing the Use Key on him, he will talk to the player and say what commands to use.
-                                        To buy or sell things, the player must be near the seller and use the appropriate commands.
-
-                                        <h4>Upgrades</h4>
-                                        
-                                        Most of the stuff the seller sells are temporary ones. If the player dies, he loses them and must buy again.
-                                        The upgrades are permanent stuff that will not be lost even if the player dies. 
-                                        It is very important to buy them, because of the benefits they give.
-                                        
-                                        <h4>Giving Credits to other players</h4>
-                                        
-                                        A player can give credits to another RPG player. Credits can also be spent, essentially deleting them from the players account without them ending up in a different one.
-                                        This can be used to create different roleplaying scenarios that involve NPCs.
-                                        
-
-                                    </p>
-
-                                    <p>A list of commands can be found below:</p>
-
-                                    <pre class="brush: html">
-                                        /callseller: Spawns the Jawa seller. 
-                                    </pre>
-                                    <pre class="brush: html">
-                                        /stuff: Shows available items to buy form the seller.
-                                    </pre>
-                                    <pre class="brush: html">
-                                        /buy [product number]: buys an item.
-                                    </pre>
-                                    <pre class="brush: html">
-                                        /givecredits [playername or ID]: Transfers the credits to another player.
-                                    </pre>
-                                    <pre class="brush: html">
-                                        /spendcredits [amount]: deletes credits form their account, thus paying for something without having to tranfer the money to someone else.
-                                    </pre>
-                                    <pre class="brush: html">
-                                        /createcredits [player] [amount]: An admin command that allows admins to add credits into the economy.
-                                    </pre>
-
-                                </div>
-                                <!-- end col -->
-                            </div>
                         </div>
                         <!-- end row -->
 
                         <div class="row">
                             <div class="col-md-12">
-                                <h3 id="line6_2">Ally System </h3>
+                                <h3 id="line6_1">Levelling System </h3>
+                                <center><a href="images/upload/xpsystem.png" data-rel="prettyPhoto"><img src="images/upload/xpsystem.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                <p>
+                                    In GalaxyRP, there are two main ways for players to be levelled up. This can be done by either using XP points, or, levelling up a player directly.
+
+                                    <h4>Experience points</h4>
+                                    
+                                    Experience points work as they do in most RPGs, in that a player receives XP, and, depending on how much they currently have, they will gain a level automatically. The current number of XP points can be seen in the listing. 
+                                    It will also show how much XP you need in order to gain a Level. Experience points can only be given by admins.
+
+                                    
+                                    <h4>Directly Levelling up</h4>
+                                    
+                                    A player can be directly levelled up by an admin as in previous versions. Levels can only be given by admins.
+
+                                    <h4>Recommendations</h4>
+                                    
+                                    I recommend to use XP, rather than give players levels directly, as it offers a bit more granularity to the admins, since this way, a player can be given half a level, a third of a level, or whatever the admins deem necessary.
+
+                                </p>
+
+                                <p>A list of commands can be found below:</p>
+
+                                <pre class="brush: html">
+                                    /list: See current XP and how much you need for levelling up. 
+                                </pre>
+
+                            </div>
+                            <!-- end col -->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line6_2">Credit System </h3>
+                                <center><a href="images/upload/creditsystem.png" data-rel="prettyPhoto"><img src="images/upload/creditsystem.png" alt="" class="img-responsive img-thumbnail"></a></center>
+                                <p>
+                                    With credits, the player can buy and sell stuff. To do that, he must call the jawa seller.
+                                    By pressing the Use Key on him, he will talk to the player and say what commands to use.
+                                    To buy or sell things, the player must be near the seller and use the appropriate commands.
+
+                                    <h4>Upgrades</h4>
+                                    
+                                    Most of the stuff the seller sells are temporary ones. If the player dies, he loses them and must buy again.
+                                    The upgrades are permanent stuff that will not be lost even if the player dies. 
+                                    It is very important to buy them, because of the benefits they give.
+                                    
+                                    <h4>Giving Credits to other players</h4>
+                                    
+                                    A player can give credits to another RPG player. Credits can also be spent, essentially deleting them from the players account without them ending up in a different one.
+                                    This can be used to create different roleplaying scenarios that involve NPCs.
+                                    
+
+                                </p>
+
+                                <p>A list of commands can be found below:</p>
+
+                                <pre class="brush: html">
+                                    /callseller: Spawns the Jawa seller. 
+                                </pre>
+                                <pre class="brush: html">
+                                    /stuff: Shows available items to buy form the seller.
+                                </pre>
+                                <pre class="brush: html">
+                                    /buy [product number]: buys an item.
+                                </pre>
+                                <pre class="brush: html">
+                                    /givecredits [playername or ID]: Transfers the credits to another player.
+                                </pre>
+                                <pre class="brush: html">
+                                    /spendcredits [amount]: deletes credits form their account, thus paying for something without having to tranfer the money to someone else.
+                                </pre>
+                                <pre class="brush: html">
+                                    /createcredits [player] [amount]: An admin command that allows admins to add credits into the economy.
+                                </pre>
+
+                            </div>
+                            <!-- end col -->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line6_3">Ally System </h3>
                                 <p>
                                     The player can have allies, players which will not receive damage from him, this is particularly useful in group fights.<br> 
                                     Allies also have a dedicated chat, separate to the team and general chats.<br>
@@ -773,7 +813,7 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <h3 id="line6_3">Emotes </h3>
+                                <h3 id="line6_4">Emotes </h3>
                                 <center><a href="images/upload/emotesystem.png" data-rel="prettyPhoto"><img src="images/upload/emotesystem.png" alt="" class="img-responsive img-thumbnail"></a></center>
                                 <p>
                                     Emotes are allowed by a server cvar. They can be used by players to animate their character in specific poses.<br>
@@ -798,7 +838,7 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <h3 id="line6_4">NPC Ordering System </h3>
+                                <h3 id="line6_5">NPC Ordering System </h3>
                                 <p>
                                     It is possible to make npcs follow you by pressing Use key on them. While they are following, you can give orders to them by using /order [option].
                                     Option may be:
@@ -807,6 +847,26 @@
                                     guard: makes the npc stand still, guarding the area. He will attack every player who is not your ally, and other npcs
                                     cover: makes npc follow you and attack every player who is not your ally, and other npcs
                                 </p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line6_6">Sound System </h3>
+                                <p>
+                                    In GalaxyRP, custom sounds can be played provided the assets are both on the server AND client. There are two commands with which this can be done:
+                                </p>
+
+                                <pre class="brush: html">
+                                    /playsound [channel] [sound]: plays sound in the channel provided.
+                                </pre>
+
+                                <pre class="brush: html">
+                                    /playmusic [music file]: plays music in a loop. ADMIN ONLY!!
+                                </pre>
+
                             </div>
                             <!-- end col -->
                         </div>
@@ -1037,6 +1097,41 @@
                         </div>
                         <!-- end row -->
 
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line12_9">Other Modifiers </h3>
+                                <p>
+                                    These can also be used as chat modifiers.
+                                </p>
+                                <pre class="brush: html">
+                                    /ryl [your message]: CHAT MODIFIER that allows a character to speak in ryl.
+                                </pre>
+                                <pre class="brush: html">
+                                    /ryl2 [your message]: CHAT MODIFIER that allows a character to speak in ryl, only using their Lekku.
+                                </pre>
+                                <pre class="brush: html">
+                                    /rodian [your message]: CHAT MODIFIER that allows a character to speak in Rodian.
+                                </pre>
+                                <pre class="brush: html">
+                                    /huttese [your message]: CHAT MODIFIER that allows a character to speak in Huttese.
+                                </pre>
+                                <pre class="brush: html">
+                                    /catharese [your message]: CHAT MODIFIER that allows a character to speak in Huttese.
+                                </pre>
+                                <pre class="brush: html">
+                                    /mando [your message]: CHAT MODIFIER that allows a character to speak in Mandalorian.
+                                </pre>
+                                <pre class="brush: html">
+                                    /npc [your message]: CHAT MODIFIER that allows a character to speak as an NPC.
+                                </pre>
+                                <pre class="brush: html">
+                                    /comm [your message]: CHAT MODIFIER that allows a character to speak into a comm link.
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
                     </section>
                     <!-- end section -->
 
@@ -1054,7 +1149,7 @@
 
                             <div class="col-md-12">
                                 <p>
-                                    GalaxyRP contains an in-game news system. While it isn't mandatory to use it, if you want to, read this section to find out how to use the system.
+                                    GalaxyRP contains an in-game news system. While it isn't mandatory to use it, if you want to, read this section to find out how to use the system. This can also be used as a messaging system, should a server decide to use it that way.
                                 </p>
                             </div>
                         </div>
@@ -1064,10 +1159,10 @@
                             <div class="col-md-12">
                                 <h3 id="line13_1">Reading the news</h3>
                                 <p>
-                                    There are four different news channels that can be read by players in-game. Apart from the generic one, which requires no modifier, the other three will require that the channel be specified. The three options are: <b>jedi</b>, <b>sith</b> and <b>republic</b>. These will display a message to all the players that run the command, which will be set by admins. (read the following section). The command to read the news is as follows:
+                                    There are an unlimited number of channels that can be used to display news. These will display a message specific to that channel to the players that run the command. The messages themselves will be set by admins. (read the following section). The command to read the news is as follows:
                                 </p>
                                 <pre class="brush: html">
-                                    /news [jedi/sith/republic](optional): Shows the news from the specified channel (or generic news if not specified).
+                                    /news [channel] [How many entried?](optional): Shows the news from the specified channel. How many entries to show can be specified as well, but it is not mandatory.
                                 </pre>
                             </div>
                             <!-- end col -->
@@ -1081,7 +1176,7 @@
                                     Updating the news will require the <b>GiveAdmin</b> admin permission. Each news channel can be updated independently, using the following command:
                                 </p>
                                 <pre class="brush: html">
-                                    /updatenews [jedi/sith/republic](optional): Updates the news in a channel (or generic news if not specified).
+                                    /updatenews [channel] [text]: Updates the news in a channel. The text has to be enclosed in double quotes for it to register properly. E.g. /updatenews Jedi "Luke has freed us!" ADMIN ONLY!!
                                 </pre>
                             </div>
                             <!-- end col -->
@@ -1142,6 +1237,18 @@
                                     </pre>
                                     <pre class="brush: html">
                                         /entdeletefile: deletes an entity file created by entsave command
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /removepickups: removes all pickups from the current map. (ammos, health, shield, and weapons pickups)
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /removepickups: removes all pickups from the current map. (ammos, health, shield, and weapons pickups)
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /spawnplatform: Spawns a platform at the current location.
+                                    </pre>
+                                    <pre class="brush: html">
+                                        /spawndummy: Spawns a dummy at the current location.
                                     </pre>
                             </div>
 
@@ -2548,6 +2655,9 @@
                                 <pre class="brush: html">
                                     /flipcoin: Flips a coin.
                                 </pre>
+                                <pre class="brush: html">
+                                    /list commands: List most of the GalaxyRP commands.
+                                </pre>
 
                             </div>
                             <!-- end col -->
@@ -2579,6 +2689,52 @@
                                 <h4>Changelog</h4>
 
                                 <pre class="brush: html">
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 3.4 - Mar 8th, 2022
+                                        -----------------------------------------------------------------------------------------
+
+                                        - Dual and Staff damages will scale with ATK skill.
+                                        - Fast style will now scale damage with increased Atk skill.
+                                        - Server will now check whether the clients have the most up to date GalaxyRP version.
+                                        - Message of the day is now improved.
+                                        - Now all saber styles can use kick instead of throw. (Dependant on the "throwable" argument in the saber files)
+                                        - Most force powers now have a maximum level of 5 instead of 3
+                                        - Added /playmusic command for people to be able to play different sounds on the server
+                                        - Added /playsound command for people to be able to play different sounds on the server
+                                        - "Niman" and "Juyo" UI elements have been reversed (Niman is Desann and Juyo is Tavion)
+                                        - Added a cvar for assigning permissions automatically upon account registration
+                                        - New Admin permissions for various admin tasks 
+                                        - Added a brand new XP system (old way to level up still works, but this is recommended)
+                                        - Improved the messages displayed when upgrading someone's skills and level (now both people will be informed properly)
+                                        - Server logs are now saved in /GalaxyRP/logs
+                                        - Added 8 new chat modifiers for different languages in the star wars universe (/ryl /ryl2 /rodian /huttese /catharese /mando /npc /comm)
+                                        - Ammo is now saved properly
+                                        - Improved database performance
+                                        - Animations are now displayed alphabetically within their groups
+                                        - Menu in a local mp game is now displayed properly
+                                        - Added two scripts to run a server and connect to one
+                                        - News files have been moved into their own folder
+                                        - Added a bitvalue calculator in the release for easier config file management
+                                        - Removed unused config files
+                                        - /scale help now displays information more accurately
+                                        - Video option menu now updated with modern configurations
+                                        - Account database and admin account will now be generated on first server run (unless one is already existing)
+                                        - Fixed some skills not displaying properly
+                                        - Logging in during spectator mode is DISABLED
+                                        - Fixed bug with salute and meditate2 emote
+                                        - Console will no longer display animation errors.
+                                        - Added Armor skill.
+                                        - Moved all item things from seller to skills.
+                                        - Selling things to the seller is now DISABLED.
+                                        - Added /shakescreen.
+                                        - Stormtrooper class npcs will now shoot at lightsaber wielding people.
+                                        - Score display is now replaced with level display in the score tab.
+                                        - added /removepickups to remove all pickups from a map.
+                                        - Added 13 new animations.
+                                        - Added /spawnplatform and /spawndummy to make it easier to spawn common things.
+                                        - Added /telemark to mark a teleport point.
+                                        - Added database modules into mod code (Extra dlls/binaries no longer required)
 
                                         -----------------------------------------------------------------------------------------
                                         Version 3.3 - Aug 21th, 2021
