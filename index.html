@@ -163,6 +163,7 @@
                                 <ul class="nav">
                                     <li><a href="#line13_1">Reading the news</a></li>
                                     <li><a href="#line13_2">Updating the news</a></li>
+                                    <li><a href="#line13_3">Deleting news</a></li>
                                 </ul>
                             </li>
                             <li><a href="#line7">Entity System</a>
@@ -1181,7 +1182,7 @@
                                     There are an unlimited number of channels that can be used to display news. These will display a message specific to that channel to the players that run the command. The messages themselves will be set by admins. (read the following section). The command to read the news is as follows:
                                 </p>
                                 <pre class="brush: html">
-                                    /news [channel] [How many entried?](optional): Shows the news from the specified channel. How many entries to show can be specified as well, but it is not mandatory.
+                                    /news [channel] [How many entries?](optional): Shows the news from the specified channel. How many entries to show can be specified as well, but it is not mandatory.
                                 </pre>
                             </div>
                             <!-- end col -->
@@ -1192,10 +1193,24 @@
                             <div class="col-md-12">
                                 <h3 id="line13_2">Updating the news</h3>
                                 <p>
-                                    Updating the news will require the <b>GiveAdmin</b> admin permission. Each news channel can be updated independently, using the following command:
+                                    Updating the news will require the <b>Update News</b> admin permission. Each news channel can be updated independently, using the following command:
                                 </p>
                                 <pre class="brush: html">
-                                    /updatenews [channel] [text]: Updates the news in a channel. The text has to be enclosed in double quotes for it to register properly. E.g. /updatenews Jedi "Luke has freed us!" ADMIN ONLY!!
+                                    /newsadd [channel] [text]: Updates the news in a channel. The text has to be enclosed in double quotes for it to register properly. E.g. /newsadd Jedi "Luke has freed us!" ADMIN ONLY!!
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line13_3">Deleting news</h3>
+                                <p>
+                                    Deleting news will require the <b>Remove News</b> admin permission. The news ID is shown for each entry to the left of the date when reading the news.
+                                </p>
+                                <pre class="brush: html">
+                                    /newsremove [News ID]: Updates the news in a channel. The text has to be enclosed in double quotes for it to register properly. E.g. /newsremove 1 ADMIN ONLY!!
                                 </pre>
                             </div>
                             <!-- end col -->
