@@ -172,6 +172,19 @@
                                     <li><a href="#line7_2">Remapping Shaders</a></li>
                                 </ul>
                             </li>
+                            <li><a href="#line16">Additional Saber Customization</a>
+                                <ul class="nav">
+                                    <li><a href="#line16_1">How .sab files work</a></li>
+                                    <li><a href="#line16_2">GalaxyRP Specific keys.</a></li>
+                                    <li><a href="#line16_3">Valid Values - Katas</a></li>
+                                    <li><a href="#line16_4">Valid Values - Stances</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line17">Death System</a>
+                                <ul class="nav">
+                                    <li><a href="#line17_1">Downed State</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#line14">Inventory System</a>
                                 <ul class="nav">
                                     <li><a href="#line14_1">Checking your inventory</a></li>
@@ -212,7 +225,7 @@
                                         <div class="intro1">
                                             <ul>
                                                 <li><strong>Mod : </strong>GalaxyRP</li>
-                                                <li><strong>Item Version : </strong> v 3.4.1</li>
+                                                <li><strong>Item Version : </strong> v 3.5</li>
                                                 <li><strong>Author  : </strong> <a href="https://github.com/alexnita3" target="_blank">Alex</a></li>
                                                 <li><strong>License : </strong> <a href="https://github.com/alexnita3/GalaxyRP/blob/develop/LICENSE.txt" target="_blank">GPL v2.0</a></li>
                                             </ul>
@@ -635,32 +648,33 @@
                                 </p>
 
                                 <pre class="brush: html">
-                                    1 - NPC : Allows the spawning of NPCs on the server.
-                                    2 - NoClip : Allows the use of /noclip, making the user able to go through walls.
-                                    3 - GiveAdmin : Allows the granting and revoking of admin permissions. (DO NOT GIVE THIS AWAY LIGHTLY)
-                                    4 - Telepot : Allows the use of /teleport command.
-                                    5 - Admin Protect : Makes the user impervious to teleportation when enabled. Also, when enabled, the user can see all the chat on the server, regardless of distance.
-                                    6 - EntitySystem : Allows the use of /ent commands.
-                                    7 - Silence : Allows silencing of players.
-                                    8 - ClientPrint : User can use the client print commands.
-                                    9 - Placeholder : !!!UNUSED!!!
-                                    10 - Kick : User can kick players.
-                                    11 - Paralyze : User can paralyze other players.
-                                    12 - Give : User can /give. Also allows the user to use /createcredits.
-                                    13 - Scale : User can scale other people. (Anyone can /scale themselves)
-                                    14 - Players : User can use /players to get player IDs and can also see other people's abilities.
-                                    15 - DuelArena : User can define the arena for the duel arena game.
-                                    16 - Placeholder : !!!UNUSED!!!
-                                    17 - Create Items : Allows the use of /createitem.
-                                    18 - God Mode : Allows the use of /god.
-                                    19 - Upgrade Level : Allows the use of /levelup.
-                                    20 - Change Skills : Allows the use of /skillup and /skilldown.
-                                    21 - Create Credits : Allows the use of /createcredits.
-                                    22 - Ignore Chat distance : Shows all chat on the server, ignoring distance.
-                                    23 - Give XP : Allows the use of /givexp.
-                                    24 - Update News : Allows a player to create new news items, on any channel.
-                                    25 - Remove News : Allows the deletion of a news item.
-                                    26 - Play Music : Allows a player to play music that the whole server can hear.
+                                    0 - NPC : Allows the spawning of NPCs on the server.
+                                    1 - NoClip : Allows the use of /noclip, making the user able to go through walls.
+                                    2 - GiveAdmin : Allows the granting and revoking of admin permissions. (DO NOT GIVE THIS AWAY LIGHTLY)
+                                    3 - Telepot : Allows the use of /teleport command.
+                                    4 - Admin Protect : Makes the user impervious to teleportation when enabled. Also, when enabled, the user can see all the chat on the server, regardless of distance.
+                                    5 - EntitySystem : Allows the use of /ent commands.
+                                    6 - Silence : Allows silencing of players.
+                                    7 - ClientPrint : User can use the client print commands.
+                                    8 - Placeholder : !!!UNUSED!!!
+                                    9 - Kick : User can kick players.
+                                    10 - Paralyze : User can paralyze other players.
+                                    11 - Give : User can /give. Also allows the user to use /createcredits.
+                                    12 - Scale : User can scale other people. (Anyone can /scale themselves)
+                                    13 - Players : User can use /players to get player IDs and can also see other people's abilities.
+                                    14 - DuelArena : User can define the arena for the duel arena game.
+                                    15 - Placeholder : !!!UNUSED!!!
+                                    16 - Create Items : Allows the use of /createitem.
+                                    17 - God Mode : Allows the use of /god.
+                                    18 - Upgrade Level : Allows the use of /levelup.
+                                    19 - Change Skills : Allows the use of /skillup and /skilldown.
+                                    20 - Create Credits : Allows the use of /createcredits.
+                                    21 - Ignore Chat distance : Shows all chat on the server, ignoring distance.
+                                    22 - Give XP : Allows the use of /givexp.
+                                    23 - Update News : Allows a player to create new news items, on any channel.
+                                    24 - Remove News : Allows the deletion of a news item.
+                                    25 - Play Music : Allows a player to play music that the whole server can hear.
+                                    26 - Instant Revive : Allows a player to bypass the downed timer for themselves, or someone else.
                                 </pre>
                             </div>
                             <!-- end col -->
@@ -844,6 +858,9 @@
                                 <p>The pertinent commands are as follows:</p>
                                 <pre class="brush: html">
                                     /emote list: shows a list of worded emotes.
+                                </pre>
+                                <pre class="brush: html">
+                                    /emote list 2: shows the second page of the list.
                                 </pre>
                                 <pre class="brush: html">
                                     /emote [number]: plays a generic animation.
@@ -1212,6 +1229,198 @@
                                 <pre class="brush: html">
                                     /newsremove [News ID]: Updates the news in a channel. The text has to be enclosed in double quotes for it to register properly. E.g. /newsremove 1 ADMIN ONLY!!
                                 </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line16" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Additional Saber Customization <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <p>
+                                    GalaxyRP offers additional lightsaber customisation. Each saber style can be customised to the players liking. These preferences are set in the .sab file of the saber the player is using. The customisation in question is done by adding extra attributes to this file.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line16_1">How .sab files work</h3>
+                                <p>
+                                    Saber files work by storing custom saber data that is then read by the game. This data is defined by key and value pairs. The key is the field, and the value is the information associated with that field. An example can be found below:
+                                </p>
+                                <pre class="brush: html">saberLength	40</pre>
+
+                                <p>In this case, saberLength is the key, and 40 is the value.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line16_2">GalaxyRP Specific keys.</h3>
+                                <p>
+                                    These keys are unique to GalaxyRP, they can all be used for customisation.
+                                </p>
+                                <pre class="brush: html">
+                                    kataMove        - Sets the Kata Animation for Shii-Cho
+                                    kataMoveYellow  - Sets the Kata animation for Soresu/Ataru. 
+                                    kataMoveRed     - Sets the Kata Animation for Shien/DjemSo
+                                    kataMovePurple  - Sets the Kata Animation for Niman
+                                    kataMoveGreen   - Sets the Kata Animation for Juyo
+                                    kataMoveDual    - Sets the Kata Animation for Jar'Kai
+                                    kataMoveStaff   - Sets the Kata Animation for Staff
+
+                                    readyAnim       - Sets the standing animation that is played when the selected style is Shii-Cho
+                                    readyAnimYellow - Sets the standing animation that is played when the selected style is Soresu/Ataru
+                                    readyAnimRed    - Sets the standing animation that is played when the selected style is Shien/DjemSo
+                                    readyAnimPurple - Sets the standing animation that is played when the selected style is Niman
+                                    readyAnimGreen  - Sets the standing animation that is played when the selected style is Juyo
+                                    readyAnimStaff  - Sets the standing animation that is played when the selected style is Jar'Kai
+                                    readyAnimDual   - Sets the standing animation that is played when the selected style is Staff
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line16_3">Valid Values - Katas</h3>
+                                <p>
+                                    The valid values for kata moves are:
+                                </p>
+                                <pre class="brush: html">
+                                    LS_A_BACK
+	                                LS_A_BACK_CR
+	                                LS_A_BACKSTAB
+	                                LS_ROLL_STAB
+	                                LS_A_LUNGE
+	                                LS_A_JUMP_T__B_
+	                                LS_A_FLIP_STAB
+	                                LS_A_FLIP_SLASH
+	                                LS_JUMPATTACK_DUAL
+	                                LS_JUMPATTACK_ARIAL_LEFT
+	                                LS_JUMPATTACK_ARIAL_RIGHT
+	                                LS_JUMPATTACK_CART_LEFT
+	                                LS_JUMPATTACK_CART_RIGHT
+	                                LS_JUMPATTACK_STAFF_LEFT
+	                                LS_JUMPATTACK_STAFF_RIGHT
+	                                LS_BUTTERFLY_LEFT
+	                                LS_BUTTERFLY_RIGHT
+	                                LS_A_BACKFLIP_ATK
+	                                LS_SPINATTACK_DUAL
+	                                LS_SPINATTACK
+	                                LS_LEAP_ATTACK
+	                                LS_SWOOP_ATTACK_RIGHT
+	                                LS_SWOOP_ATTACK_LEFT
+	                                LS_TAUNTAUN_ATTACK_RIGHT
+	                                LS_TAUNTAUN_ATTACK_LEFT
+	                                LS_KICK_F
+	                                LS_KICK_B
+	                                LS_KICK_R
+	                                LS_KICK_L
+	                                LS_KICK_S
+	                                LS_KICK_BF
+	                                LS_KICK_RL
+	                                LS_KICK_F_AIR
+	                                LS_KICK_B_AIR
+	                                LS_KICK_R_AIR
+	                                LS_KICK_L_AIR
+	                                LS_STABDOWN
+	                                LS_STABDOWN_STAFF
+	                                LS_STABDOWN_DUAL
+	                                LS_DUAL_SPIN_PROTECT
+	                                LS_STAFF_SOULCAL
+	                                LS_A1_SPECIAL
+	                                LS_A2_SPECIAL
+	                                LS_A3_SPECIAL
+	                                LS_UPSIDE_DOWN_ATTACK
+	                                LS_PULL_ATTACK_STAB
+	                                LS_PULL_ATTACK_SWING
+	                                LS_SPINATTACK_ALORA
+	                                LS_DUAL_FB
+	                                LS_DUAL_LR
+	                                LS_HILT_BASH
+	                                LS_ANAKINKATA
+	                                LS_ANAKINKATA2
+	                                LS_ANAKINKATA3
+                                </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line16_4">Valid Values - Stances</h3>
+                                <p>
+                                    The possible values for stances is too big to put it in this document, but it can be found <a href="https://github.com/alexnita3/GalaxyRP/blob/develop/codemp/game/anims.h">here</a>.
+                                </p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line17" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Death System<hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <p>
+                                    GalaxyRP death works differently to the standard game, making play more immersive.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 id="line17_1">Downed State</h3>
+                                <p>
+                                    A player enters a downed state when their hitpoints first go to 0. While in this state, the player cannot move or attack, and must wait for their downed counter to finish. If a player is attacked while downed, and their hitpoints go to 0 once again, they die. NPCs will not attack downed players.
+                                </p>
+                                <center><a href="images/upload/downedsystem.PNG" data-rel="prettyPhoto"><img src="images/upload/downedsystem.PNG" alt="" class="img-responsive img-thumbnail"></a></center>
+                                <p>
+                                    After the counter has finished, the player has two options. Getting up by themselves, or having someone else help them up. To get up by themselves, they need to do:
+                                </p>
+                                <pre class="brush: html">/getup</pre>
+                                <p>
+                                    To help someone else up, the command is:
+                                </p>
+                                <pre class="brush: html">/helpup [playername]</pre>
+                                <p>
+                                    After being revived, the player is invulnerable for a short period of time.
+                                </p>
+                                <p>
+                                    Admins can ignore the counter. Server administrators can customise how long the counter is, as well as how long the invulnerable players' state lasts for.
+                                </p>
                             </div>
                             <!-- end col -->
                         </div>
@@ -2723,6 +2932,18 @@
                                 <h4>Changelog</h4>
 
                                 <pre class="brush: html">
+                                        -----------------------------------------------------------------------------------------
+                                        Version 3.5 - Jun 24th, 2022
+                                        -----------------------------------------------------------------------------------------
+
+                                        - Added more reliable manual parry. (if a player keeps their opponent in their reticule, the parry rate goes up)
+                                        - Added new death system. Now players will go down before they die, with a chance to be revived.
+                                        - Added 32 new animations.
+                                        - Saber stance can now be customised per saber style.
+                                        - Saber Kata can now be customised per style.
+                                        - Added 3 more available Kata options.
+                                        - Fixed "aim" emote.
+                                        - Bought myself a cake for my birthday.
 
                                         -----------------------------------------------------------------------------------------
                                         Version 3.4.1 - Mar 29th, 2022
