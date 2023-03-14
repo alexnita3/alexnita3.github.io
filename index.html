@@ -166,23 +166,23 @@
                                     <li><a href="#line13_3">Deleting news</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#line7">Entity System</a>
-                                <ul class="nav">
-                                    <li><a href="#line7_1">List of Entities</a></li>
-                                    <li><a href="#line7_2">Remapping Shaders</a></li>
-                                </ul>
-                            </li>
                             <li><a href="#line16">Additional Saber Customization</a>
                                 <ul class="nav">
                                     <li><a href="#line16_1">How .sab files work</a></li>
                                     <li><a href="#line16_2">GalaxyRP Specific keys.</a></li>
                                     <li><a href="#line16_3">Valid Values - Katas</a></li>
-                                    <li><a href="#line16_4">Valid Values - Stances</a></li>
+                                    <li><a href="#line16_4">Valid Values - Stances and Idle animations</a></li>
                                 </ul>
                             </li>
                             <li><a href="#line17">Death System</a>
                                 <ul class="nav">
                                     <li><a href="#line17_1">Downed State</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line7">Entity System</a>
+                                <ul class="nav">
+                                    <li><a href="#line7_1">List of Entities</a></li>
+                                    <li><a href="#line7_2">Remapping Shaders</a></li>
                                 </ul>
                             </li>
                             <li><a href="#line14">Inventory System</a>
@@ -225,7 +225,7 @@
                                         <div class="intro1">
                                             <ul>
                                                 <li><strong>Mod : </strong>GalaxyRP</li>
-                                                <li><strong>Item Version : </strong> v 3.5</li>
+                                                <li><strong>Item Version : </strong> v 3.7</li>
                                                 <li><strong>Author  : </strong> <a href="https://github.com/alexnita3" target="_blank">Alex</a></li>
                                                 <li><strong>License : </strong> <a href="https://github.com/alexnita3/GalaxyRP/blob/develop/LICENSE.txt" target="_blank">GPL v2.0</a></li>
                                             </ul>
@@ -730,10 +730,10 @@
                                 </p>
 
                                     <pre class="brush: html">
-                                        /skillup [skill number]: upgrades a skill. Requires at least 1 skill point
+                                        /skillup [skill number] [how many levels] (optional): upgrades a skill. Requires at least 1 skill point
                                     </pre>
                                     <pre class="brush: html">
-                                        /skilldown [skill number]: downgrades a skill. The player recovers 1 skill point
+                                        /skilldown [skill number] [how many levels] (optional): downgrades a skill. The player recovers 1 or more skill points
                                     </pre>
                             </div>
                         </div>
@@ -797,15 +797,6 @@
 
                                 <p>A list of commands can be found below:</p>
 
-                                <pre class="brush: html">
-                                    /callseller: Spawns the Jawa seller. 
-                                </pre>
-                                <pre class="brush: html">
-                                    /stuff: Shows available items to buy form the seller.
-                                </pre>
-                                <pre class="brush: html">
-                                    /buy [product number]: buys an item.
-                                </pre>
                                 <pre class="brush: html">
                                     /givecredits [playername or ID]: Transfers the credits to another player.
                                 </pre>
@@ -1293,6 +1284,14 @@
                                     readyAnimGreen  - Sets the standing animation that is played when the selected style is Juyo
                                     readyAnimStaff  - Sets the standing animation that is played when the selected style is Jar'Kai
                                     readyAnimDual   - Sets the standing animation that is played when the selected style is Staff
+
+                                    idleAnimBlue    - Sets the idle animation (gets played when idle with saber off) to play while blue style is selected.
+                                    idleAnimYellow  - Sets the idle animation (gets played when idle with saber off) to play while yellow style is selected.
+                                    idleAnimRed     - Sets the idle animation (gets played when idle with saber off) to play while red style is selected.
+                                    idleAnimPurple  - Sets the idle animation (gets played when idle with saber off) to play while purple style is selected.
+                                    idleAnimGreen   - Sets the idle animation (gets played when idle with saber off) to play while green style is selected.
+                                    idleAnimDual    - Sets the idle animation (gets played when idle with saber off) to play while dual style is selected.
+                                    idleAnimStaff   - Sets the idle animation (gets played when idle with saber off) to play while staff style is selected.
                                 </pre>
                             </div>
                             <!-- end col -->
@@ -1368,9 +1367,9 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <h3 id="line16_4">Valid Values - Stances</h3>
+                                <h3 id="line16_4">Valid Values - Stances and Idle Animations</h3>
                                 <p>
-                                    The possible values for stances is too big to put it in this document, but it can be found <a href="https://github.com/alexnita3/GalaxyRP/blob/develop/codemp/game/anims.h">here</a>.
+                                    The possible values for stances and idle animations is too big to put it in this document, but it can be found <a href="https://github.com/alexnita3/GalaxyRP/blob/develop/codemp/game/anims.h">here</a>.
                                 </p>
                             </div>
                             <!-- end col -->
@@ -2932,6 +2931,35 @@
                                 <h4>Changelog</h4>
 
                                 <pre class="brush: html">
+                                        
+                                        -----------------------------------------------------------------------------------------
+                                        Version 3.7 - Mar 14th, 2023
+                                        -----------------------------------------------------------------------------------------
+
+                                        - When helping a player up, an animation now gets played.
+                                        - Shield Regen and Health Regen are now displayed properly in the ui
+                                        - Alternative weapon fire (right click) now only works if your skill in that weapon is 2.
+                                        - Corrected /scale help. The height shown are now accurate to real life heights.
+                                        - Fixed bug with saber running animation getting played when the saber was holstered
+                                        - Added new lightsaber customization tags for idle animations (idleAnimBlue, idleAnimYellow, idleAnimRed, idleAnimPurple, idleAnimGreen, idleAnimDual, idleAnimStaff)
+                                        - NPCs now get saved in the entity file
+                                        - Current character field now gets populated in the ui
+                                        - New icons for custom model and custoom saber
+                                        - HD fonts
+                                        - Updated ui
+                                        - Skill fields now can't be edited anymore in the ui
+                                        - Added `crate01` NPC and model
+                                        - Skill changes now take immediate effect (Weapons and items get given automatically now)
+                                        - Skill ID is now shown in the skill menu
+                                        - Reversed `readyAnimPurple` and `readyAnimGreen` saber tags. Now they are in the correct order
+                                        - Apply button in the Character customization menu now works correctly
+                                        - Ammo and explosive ammo now recharges automatically when idle (see `rp_ammo_regen_timer` and `rp_explosives_recharge_timer` cvars)
+                                        - /callseller is now permanently disabled
+                                        - added better messaging in /skillup and /skilldown
+                                        - Added /leveldown command
+                                        - You can now increase and decrease skills by more than one point at a time. (e.g. /skillup Alex 10 5)
+                                        - Added new jetpack model
+                                    
                                         -----------------------------------------------------------------------------------------
                                         Version 3.6 - Sep 8th, 2022
                                         -----------------------------------------------------------------------------------------
